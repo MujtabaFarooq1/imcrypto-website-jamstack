@@ -2,7 +2,7 @@
   <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
 </a>
 
-# Gatsby Starter Sanity Homepage
+# Gatsby With Sanity CMS
 
 Create a homepage using Gatsby and Sanity. This starter demonstrates how to use Sanity to build a homepage and can be customized to match your own visual branding.
 
