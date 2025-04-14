@@ -1,0 +1,106 @@
+@import "../../styles/config";
+
+.merch-pagination{
+    margin-top: 2.6875em;
+    background-color: $product-row-bgcolor;
+    border: 0.125em solid $product-row-bordercolor;
+    border-radius: 1.625em;
+    padding: 1.875em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media (large) {
+        padding: 1em;
+    }
+    @include media (small) {
+        margin-top: 1.5em;
+    }
+    @include media (very-small) {
+        padding: 0;
+        justify-content: space-between;
+    }
+    a{
+        background-color: $nav-btn-bgcolor;
+        border: 0.075em solid $light-gray-color;
+        padding:  0.875em 2.25em;
+        border-radius: 3.75em;
+        @include media (large) {
+            padding: 0.5em 1.5em;
+        }
+        @include media (very-small) {
+            padding: 0.1em 0.5em;
+            background-color: transparent;
+            border: none;
+        }
+
+        &:hover{
+            background-color: $theme-color;
+            border: 0.075em solid $theme-color;
+            color: $black-color;
+        }
+    }
+
+
+    .pageList{
+        @include media(small){
+            margin: 1em 0;
+        }
+        @include media(very-small){
+            margin: 0.8em 0;
+        }
+        ul{
+            display: flex !important;
+            grid-template-columns: auto !important;
+            grid-column-gap: 0 !important;
+            padding: 0 1.25em;
+            @include media(medium-small){
+                padding: 0 1.25em;
+            }
+            @include media(very-small){
+                padding:  0.25em;
+            }
+            li{
+                &.active{
+                    a{
+                        background-color: $theme-color !important;
+                        color: $black-color !important;
+                        font-weight: 800;
+                        
+                    }
+                }
+                a{
+                    border: none !important;
+                    background: none !important;
+                    color: $light-gray-color!important;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+    
+    .disable_btn{
+        pointer-events: none;
+        a{
+            pointer-events: none;
+            background-color: #737373;
+            color: $theme-color;
+            opacity: 0.3;
+            border: 0.075em solid $theme-color;
+            &:hover{
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.disable_btn{
+    &.merch-pagination{
+        pointer-events: none;
+        opacity: 0.7;
+
+        .disable_btn, .pageList{
+            opacity: 0.5;
+        }
+    }
+}

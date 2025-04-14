@@ -1,0 +1,178 @@
+@import "../../styles/config";
+
+.merchblog-section{
+    padding: 6.25em 0;
+    .container{
+        .section-header{
+            max-width:  49em;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            
+
+            // @include media (large){
+            //     font-size: 0.8em;
+            // }
+            h1{
+                font-size: $font-size-50;
+                font-weight: $weight-700;
+                line-height: 1.25em;
+                color: $theme-color;
+                margin-bottom:  0.5em;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: $font-size-16;
+                font-weight: $weight-400;
+                line-height: 1.5em;
+                color: $white-color;
+                letter-spacing: 0.03em;
+                text-align: center;
+                max-width: 55%;
+                margin: 0 auto;
+                
+
+                @include media (small){
+                    line-height: 1.5em;
+                    font-size: $font-size-20;
+                    max-width: 80%;
+                }
+            }
+        }
+        .merchblog-inner{
+            margin-top: 78px;
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 3.125em;
+                padding: 0 3em;
+                @include media(large){
+                    padding: 0 1em;
+                    grid-column-gap: 1.5em;
+                }
+                @include media(small){
+                    grid-template-columns: 1fr 1fr;
+                }
+                @include media(medium-small){
+                    grid-template-columns: 1fr;
+                }
+
+                li{
+                    &.merchblogs-col{
+                        background-color: $product-row-bgcolor;
+                        border: 0.125em solid $product-row-bordercolor;
+                        border-radius: 1.625em;
+                        padding: 1.5em;
+                        width: auto;
+                        margin: 0 1em;
+                        display: block;
+                        @include media(large){
+                            width: 100%;
+                            margin: 0;
+                        }
+                    
+                        @include media(medium){
+                            margin: 0;
+                        }
+                    
+                        @include media (small){
+                            margin: 1em auto;
+                          }
+                    
+                        // @include media (medium-small){
+                        //     margin: 1em auto;
+                        //     width: 80%;
+                        //   }
+                    
+                          @include media (very-small){
+                            margin: 1em auto;
+                            padding: 1em;
+                          }
+                    
+                        img{
+                            display: block;
+                            object-fit: cover;
+                            width: 100%;
+                            border-radius: 1.5em;
+                    
+                            @include media (medium-small){
+                               width: 100%;
+                               display: block;
+                            }
+                        }
+                    
+                        .blog-header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 2.5em 0 0.9375em 0;
+                            
+                            h6{
+                                font-size: $font-size-16;
+                                font-weight: $weight-700;
+                                line-height: 1.5em;
+                                color: $theme-color;
+                                text-transform: capitalize;
+                            }
+                            p{
+                                font-size: $font-size-16;
+                                font-weight: $weight-400;
+                                line-height: 1.5em;
+                                color: $light-gray-color;
+                                text-transform: capitalize;
+                            }
+                        }
+                    
+                        .blog-info{
+                            h5{
+                                font-size: $font-size-24;
+                                line-height: 1.5em;
+                                font-weight: $weight-700;
+                                color: $white-color;
+                                text-align: left;
+                                margin-bottom: 0.625em;
+                            }
+                            p{
+                                font-size: $font-size-16;
+                                line-height: 1.5em;
+                                font-weight: $weight-400;
+                                color: $white-color;
+                                text-align: left;
+                                opacity: 0.6;
+                            }
+                        }
+                        .blogs-learn-more{
+                                margin-top: 2.125em;
+                    
+                                @include media (small){
+                                    font-size: 1.25em;
+                                }
+                    
+                                button{
+                                    padding: 0;
+                                    a{
+                                        display: inline-block;
+                                        background-color: $nav-btn-bgcolor;
+                                        padding:  0.6375em 1.575em;
+                                        font-size: $font-size-13;
+                                        font-weight: $weight-bold;
+                                        color: $theme-color;
+                                        border: 0.075em solid $light-gray-color;
+                                        border-radius: 3.75em;
+                                        text-transform: uppercase;
+                    
+                                        &:hover{
+                                            background-color: $theme-color;
+                                            color: $black-color;
+                                        }
+                                    }
+                    
+                                }
+                                
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

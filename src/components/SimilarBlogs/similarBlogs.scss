@@ -1,0 +1,39 @@
+@import "../../styles/config";
+
+.similarBlogs {
+  &__notfound {
+    color: $theme-color;
+    font-weight: 600;
+
+    font-size: 22px;
+  }
+
+  &__card {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 1rem;
+    transition: all 0.5s;
+
+    &:hover {
+      -webkit-box-shadow: 0px 0px 40px $theme-color;
+      box-shadow: 0px 0px 40px $theme-color;
+    }
+
+    .gatsby-image-wrapper {
+      border-radius: 15px;
+    }
+
+    .blogcard__title {
+      font-size: 20px;
+      line-height: 1.2em;
+      word-break: break-all;
+    }
+
+    .blogcard__desc {
+      font-size: 14px;
+      margin-top: 5px;
+      line-height: 1.2em;
+    }
+  }
+}

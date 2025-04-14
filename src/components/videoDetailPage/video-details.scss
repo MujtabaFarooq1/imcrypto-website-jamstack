@@ -1,0 +1,255 @@
+@import "../../styles/config"; 
+
+.videodetails-section{
+
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../../images/divider-line.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    .container{
+        .collapsible-video-details{
+            padding: 12em 0 8em 0;
+            @include media(small){
+                padding: 8em 0 6em 0;
+            }
+            @include media(medium-small){
+                padding: 8em 0 5em 0;
+            }
+            .videos-frame{
+                iframe{
+                    width: 100%;
+                    height: 545px !important;
+                    border-radius: 1.625em;
+                    overflow: hidden;
+                    @include media(medium){
+                        height: 400px !important;
+                    }
+                    @include media(small){
+                        height: 300px !important;
+                    }
+                    @include media(medium-small){
+                        height: 270px !important;
+                        border-radius: 0.8em;
+                    }
+                    @include media(very-small){
+                        height: 220px !important;
+                    }
+                }
+            }
+            .video-tags{
+                margin-top: 1.875em;
+                ul{
+                    list-style-type: none;
+                    display: inline-flex;
+                    grid-column-gap: 0;
+                    li{
+                        
+                        a {
+                            font-size: $font-size-12;
+                            font-weight: 700;
+                            line-height: 1em;
+                            padding: 0.25em 0.8em;
+                            border: 0.2em solid $product-row-bordercolor;
+                            background-color: $gray-151515;
+                            border-radius: 5em;
+                            margin: 0 1em 0 0;
+                            cursor: pointer;
+                
+                            &:hover {
+                              background-color: $theme-color;
+                              color: $black-color;
+                              border: 0.2em solid $theme-color;
+                            }
+                          }
+                    }
+                }
+            }
+            .video-description{
+                margin-top: 1em;
+                h4{
+                    font-size: $font-size-40;
+                    font-weight: 700;
+                    line-height: 60px;
+                    color: $theme-color;
+                    text-align: left;
+                    margin-bottom: 0.7em;
+                    @include media(medium-small){
+                       line-height: 42px;
+                       font-size: $font-size-32;
+                    }
+                    @include media(very-small){
+                        line-height: 36px;
+                        font-size: $font-size-32;
+                     }
+                }
+                ol{
+                    padding-left: 1.125em;
+                    opacity: 0.8;
+                    li{
+                        font-size: $font-size-14;
+                        line-height: 24px;
+                        font-weight: 400;
+                        letter-spacing: 0.06em;
+                        color: $white-color;
+                    }
+                }
+                p{
+                    font-size: $font-size-14;
+                    line-height: 24px;
+                    font-weight: 400;
+                    letter-spacing: 0.06em;
+                    color: $white-color;
+                    opacity: 0.8;
+                    margin: 1em 0;
+                }
+            }
+        }
+        
+
+    }
+
+    div{
+        &:before, &::after{
+            max-height: 60em;
+            @include media(medium){
+                max-height: 50em;
+            }
+            @include media(medium-small){
+                max-height: 40em;
+            }
+            @include media(very-small){
+                max-height: 30em;
+            }
+        }
+    }
+}
+
+.related-videos{
+    padding: 6.25em 0;
+    @include media(medium){
+        padding: 3.25em 0;
+     }
+     @include media(medium-small){
+        padding: 2em 0 3.25em 0;
+     }
+    .container{
+        .related-video-inner{
+            margin-top: 1.875em;
+            ul{
+                list-style-type: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 3.125em;
+                grid-row-gap: 3.125em;
+                @include media(medium){
+                    grid-template-columns: 1fr 1fr;
+                }
+                @include media(small){
+                    grid-template-columns: 1fr;
+                }
+
+                li{
+                    &.video-col{
+                        background-color: $black-color;
+                        border-radius: 1.625em;
+                        border: 0.125em solid $product-row-bordercolor;
+                        padding: 1.875em;
+                        position: relative;
+                        a{
+                            a{
+                                &.title-link{
+                                    font-size: $font-size-28;
+                                    font-weight: 700;
+                                    color: $white-color;
+                                    text-align: left;
+                                    margin: 1.1875em 0 0.5em 0; 
+                                    display: block;
+
+                                    &:hover{
+                                        color: $theme-color;
+                                    }
+                                }
+                                
+                            }
+                            .video-col-img{
+                                position: relative;
+                                .play-btn{
+                                    width: 3em;
+                                    height: 3em;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 40%;
+                                    margin: 0 auto;
+
+                                    &:after{
+                                        content: '';
+                                        background-image: url('../../images/play-button.svg');
+                                        background-repeat: no-repeat;
+                                        background-size: 3em;
+                                        display: flex;
+                                        justify-content: center;
+                                        width: 3em;
+                                        height: 3em;
+                                    }
+                                }
+                            }
+                        }
+
+                        p{
+                            font-size: $font-size-18;
+                            font-weight: 400;
+                            line-height: 28px;
+                            letter-spacing: 0.06em;
+                            color: $white-color;
+                            opacity: 0.8;
+                        }
+
+                        .video-col-tags{
+                            margin-top: 1.875em;
+                            ul{
+                                list-style-type: none;
+                                display: inline-flex;
+                                grid-column-gap: 0;
+                                li{
+                                    
+                                    a {
+                                        font-size: $font-size-12;
+                                        font-weight: 700;
+                                        line-height: 1em;
+                                        padding: 0.25em 0.8em;
+                                        border: 0.2em solid $product-row-bordercolor;
+                                        background-color: $gray-151515;
+                                        border-radius: 5em;
+                                        margin: 0 1em 0 0;
+                                        cursor: pointer;
+                            
+                                        &:hover {
+                                          background-color: $theme-color;
+                                          color: $black-color;
+                                          border: 0.2em solid $theme-color;
+                                        }
+                                      }
+                                }
+                            }
+                        }
+
+                       
+                    }
+                }
+            }
+        }
+    }
+}

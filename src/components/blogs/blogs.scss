@@ -1,0 +1,429 @@
+@import "../../styles/config";
+
+.recentblogs-scetion {
+  background-color: $black-color;
+  position: relative;
+  z-index: 2;
+  padding: 4.5em 0;
+  overflow-x: hidden;
+
+  .blur-cover {
+    display: block;
+    position: absolute;
+    // left: 34%;
+    // right: -100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+  }
+ .overlay-text {
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    // top: 40%;
+    // left: 40%;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // @include media(wide){
+    //   left: 30%;
+    // }
+    // @include media(large){
+    //   left: 0;
+    //   top: 60%;
+    //   width: 100%;
+    // }
+    // @include media(medium){ 
+    //   top: 60%;
+    // }
+}
+.overlay-header {
+  h2 {
+      font-size: 3.5625em;
+      line-height: 1.25em;
+      font-weight: 700;
+      margin: 0 0 0.5em 0;
+      letter-spacing: 0.125em;
+      text-shadow: 2px 0 $theme-color, -2px 0 $theme-color, 0 2px $theme-color, 0 -2px $theme-color,
+          1px 1px $theme-color, -1px -1px $theme-color, 1px -1px $theme-color, -1px 1px $theme-color;
+      @include media(wide){
+          font-size: 3.5em; 
+      }
+      @include media(large){
+          font-size: 3.3em; 
+      }
+      @include media(medium){
+          font-size: 3em; 
+      }
+      @include media(very-small){
+          font-size: 2.7em; 
+      }
+     
+  }
+
+  h6 {
+      font-size: 1.8125em;
+      font-weight: $weight-400;
+      line-height: 1.25em;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $white-color;
+      @include media(wide){
+          font-size: 1.8em; 
+      }
+      @include media(large){
+          font-size: 1.7em; 
+      }
+      @include media(medium){
+          font-size: 1.5em; 
+      }
+      @include media(medium){
+          font-size: 1.4em; 
+      }
+      @include media(very-small){
+          font-size: 1.2em; 
+      }
+  }
+}
+  .blogs-col-cover {
+    margin: 0 1em;
+
+    @include media(small) {
+      position: relative;
+      // padding-bottom: 5em;
+      padding-bottom: 7em;
+    }
+
+    .carousel-container {
+      ul {
+        display: flex;
+        li {
+          width: 100% !important;
+          @include media(large) {
+            width: 100% !important;
+            margin: 0 1em;
+          }
+          @include media(very-small) {
+            margin: 0 2em;
+          }
+          > div {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      button {
+        // @include media (small){
+        //     position: relative;
+        // }
+        &.react-multiple-carousel__arrow--left {
+          background-image: url("../../images/left-slider.svg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 4em;
+          height: 4em;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 35%;
+
+          @include media(large) {
+            // top: 20%;
+            top:22%;
+            left: 0;
+          }
+          @include media(medium-large) {
+            // top: 93%;
+            top: 22%;
+            left: 40%;
+          }
+          @include media(medium) {
+            // font-size: 0.6em;
+            // top: 18%;
+            font-size: 0.85em;
+            top: 20%;
+          }
+          
+          @include media(very-small) {
+            left: 30%;
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        &.react-multiple-carousel__arrow--right {
+          background-image: url("../../images/right-slider.svg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 4em;
+          height: 4em;
+          display: block;
+          position: absolute;
+          left: 8em;
+          top: 35%;
+          @include media(large) {
+            // top: 20%;
+            top: 22%;
+          }
+          @include media(medium-large) {
+            // top: 93%;
+            top: 22%;
+            left: 55%;
+          }
+          @include media(medium) {
+            // font-size: 0.6em;
+            // top: 18%;
+            font-size: 0.85em;
+            top: 20%;
+          }
+          
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    @include media(medium-small) {
+      display: block;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -7em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../../images/blog-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  @include media(medium) {
+    padding: 2.5em 0;
+  }
+  @include media(very-small) {
+    padding: 2em 0;
+  }
+
+  .container {
+
+    .recentblogs-inner-section {
+      .recentblog-main-content {
+        // display: grid;
+        // grid-template-columns: 2fr 4fr;
+        // grid-template-rows: 1fr;
+        // grid-column-gap: 2em;
+        display: block;
+        position: relative;
+        border: 0.125em dashed #2c2c2c;
+
+        @include media(large) {
+          display: block;
+          height: 450px;
+          overflow: hidden;
+        }
+
+        @include media(medium){
+          height: 350px;
+        }
+
+        .recentblog-slider-info {
+
+          @include media(large) {
+            margin-bottom: 3em;
+            margin-left: 0;
+          }
+
+          @include media(small) {
+            margin-left: 0;
+          }
+
+          .section-header {
+            max-width: 24.1875em;
+
+            @include media(medium-large) {
+              margin: 0 auto;
+            }
+            h2{
+              margin-bottom: 0.2em;
+            }
+            h2,h6,p{
+              text-align: left;
+              @include media(medium-large){
+                text-align: center;
+              }
+            }
+            p{
+              color: #A2A2A2;
+           
+            }
+          }
+
+          .slider-btn {
+            margin-top: 1.75em;
+
+            @include media(small) {
+              text-align: center;
+            }
+
+            .btn_global {
+              padding: 0;
+              margin-right: 3em;
+
+              @include media(small) {
+                margin: 0 2em;
+              }
+              a {
+                img {
+                  width: 3.5em;
+                }
+              }
+            }
+          }
+
+          .view-all-btn {
+            margin-top: 10em;
+            // @include media(medium) {
+            //   margin-top: 5em;
+            // }
+            @include media(medium-large) {
+              text-align: center;
+            }
+            @include media(medium) {
+              margin-top: 8em;
+            }
+            @include media(small) {
+              margin: 2em 0 0 0;
+              font-size: 0.875em;
+            }
+
+            .btn_global {
+              padding: 0;
+
+              a {
+                text-transform: uppercase;
+                position: relative;
+                font-weight:700;
+                font-size: 0.9em;
+
+                &:hover {
+                  color: $theme-color;
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  right: -2.2em;
+                  top: 0.2em;
+                  background-image: url("../../images/path-yellow.png");
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  width: 1.5em;
+                  height: 1.5em;
+                }
+              }
+            }
+          }
+        }
+
+        .recentblog-main-slider {
+          display: block;
+          overflow: hidden;
+          // border-radius: 30px;
+          // width: 2000px;
+          // margin-right: -230vh;
+          width: 100%;
+          margin-right: 0;
+
+          .overlay-text {
+            max-width: 50%;
+            width: 100%;
+            z-index: 3;
+            position: absolute;
+            top:0;
+            // transform: translateY(-50%);
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+           
+        }
+    
+
+      .visit-btn {
+          display: block;
+          text-align: center;
+          margin-top: 2em;
+
+          a {
+              display: inline-block;
+              background-color: $theme-color;
+              padding: 1.161875em 4.970625em 1.161875em 2.625em;
+              font-size: $font-size-14;
+              font-weight: $weight-bold;
+              color: $black-color;
+              border: 0.075em solid $light-gray-color;
+              border-radius: 3.75em;
+              position: relative;
+              text-transform: uppercase;
+
+              &:hover {
+                  background-color: $nav-btn-bgcolor;
+                  color: $theme-color;
+              }
+
+              &::after {
+                  content: '';
+                  position: absolute;
+                  right: 2.5em;
+                  top: 1.4em;
+                  background-image: url('../../images/path.png');
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  width: 1.5em;
+                  height: 1.5em;
+
+              }
+
+              &:hover {
+
+                  &::after {
+                      background-image: url('../../images/path-yellow.png');
+                  }
+              }
+          }
+      }
+         
+        }
+      }
+    }
+  }
+}
+
+
+// design changes
+
+.recentblog-slider-info,.recentblogs-scetion .blogs-col-cover .carousel-container button.react-multiple-carousel__arrow--right,.recentblogs-scetion .blogs-col-cover .carousel-container button.react-multiple-carousel__arrow--left{
+  display: none;
+}

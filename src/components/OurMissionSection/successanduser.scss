@@ -1,0 +1,71 @@
+.success-and-users {
+  .wraper {
+    width: 80%;
+    margin: auto;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+  padding: 50px 0px;
+  @media (max-width: 600px) {
+    padding: 0px !important;
+  }
+
+  .secondaryHeading {
+    width: 100%;
+  }
+}
+.card-box {
+  background: #181818;
+  border: 1.72222px solid #282828;
+  border-radius: 22.3889px;
+  padding: 30px;
+  margin-top: 1rem;
+  height: 22rem;
+
+  .title {
+    color: #fff;
+    text-align: left;
+    margin: 15px 0px 7px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24.2778px;
+    line-height: 36px;
+    @media (max-width: 1400px) {
+      font-size: 18px !important;
+      line-height: 1.7rem;
+    }
+  }
+  .desc {
+    color: #a1a1a1;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12 !important;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    @media (max-width: 1400px) {
+      font-size: 14px !important;
+      line-height: 1.4rem;
+    }
+  }
+}
+.bg-botto-linear {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 67.19%,
+    #1f1f1f 100%
+  );
+
+  padding: 2rem 0;
+}
+.my-5 {
+  margin-top: 2.2rem;
+  @media (max-width: 2560px) {
+    width: 100% !important;
+  }
+}

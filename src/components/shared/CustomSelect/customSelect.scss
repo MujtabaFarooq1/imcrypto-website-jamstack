@@ -1,0 +1,33 @@
+@import "../../../styles/config";
+.customSelect {
+  width: 100%;
+  background: transparent;
+  color: #dfdfdf66;
+
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+
+  @include media(small) {
+    font-size: 9px;
+  }
+
+  & option {
+    background-color: black;
+    color: white;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary-black-background;
+    border: 3.15508px solid $secondary-black-background;
+    border-radius: 41.016px;
+  }
+  &__icon {
+    // margin-left: 10px;
+    background: $theme-color;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,67 @@
+@import "./../../styles/globalstyle.scss";
+
+.pointsSummaryPopup {
+  &__content {
+    .modal-content {
+      background: transparent;
+      border: none;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: $theme-color;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 3rem;
+    margin: 0 auto;
+    font-weight: 600;
+
+    &Container {
+      text-align: center;
+    }
+  }
+
+  &__body {
+    background: #1a1a1a;
+    border: 2px solid #474747;
+    border-radius: 21.1898px;
+    color: white;
+    padding: 50px 10px;
+
+    &__heading {
+      font-size: 35px;
+      color: $theme-color;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 700;
+
+      @include media(small) {
+        font-size: 30px;
+      }
+    }
+
+    &__address {
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      word-break: break-all;
+      @include media(small) {
+        font-size: 15px;
+      }
+    }
+
+    .customTable {
+      margin-bottom: 10px;
+
+      td {
+        a {
+          width: 100%;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

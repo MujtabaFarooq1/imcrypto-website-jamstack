@@ -1,0 +1,126 @@
+@import "../../styles/globalstyle.scss";
+
+.blackpaperGallerySection {
+  padding: 3rem 0px;
+  width: 90%;
+
+  margin: 0 auto;
+
+  & .row .item {
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    height: 100%;
+    border: 2px solid $gray-shade-color;
+    padding: 2rem;
+    border-radius: 2rem;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 1s linear;
+
+    @include media(medium-small) {
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    &:hover {
+      background-color: $gray-151515;
+
+      .blackpaperGallerySection__item__btn {
+        background-color: $theme-color;
+        border-color: $theme-color;
+
+        &:hover {
+          background-color: transparent;
+          border-color: $light-gray-color;
+
+          span {
+            color: $theme-color;
+          }
+          svg {
+            margin-left: 10px;
+            * {
+              fill: $theme-color;
+            }
+          }
+        }
+
+        span {
+          max-width: 200px;
+        }
+        svg {
+          margin-left: 10px;
+          * {
+            fill: $black-color;
+          }
+        }
+      }
+    }
+
+    &__img {
+      image-rendering: pixelated;
+      margin: 0 auto;
+      display: block;
+      margin-top: 2rem;
+      max-height: 300px;
+
+      @include media(medium-small) {
+        max-height: 150px;
+      }
+    }
+
+    &__heading {
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: $theme-color;
+      text-align: left;
+
+      @include media(medium-small) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 1.5rem;
+    }
+
+    &__btn {
+      background-color: $gray-bg-color;
+      padding: 1rem;
+      font-weight: 600;
+      color: $black-color;
+      border-radius: 50rem;
+      border: 1px solid $light-gray-color;
+      font-size: 1rem;
+      margin: 0 auto;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: all 1s linear;
+
+      span {
+        max-width: 0px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+      }
+      svg {
+        width: 20px;
+        * {
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: $black-color;
+      }
+    }
+  }
+}

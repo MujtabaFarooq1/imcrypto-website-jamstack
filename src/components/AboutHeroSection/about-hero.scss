@@ -1,0 +1,63 @@
+.aboutHeroSections {
+  padding-top: 120px;
+  color: #fff;
+  margin: 10px auto 0px;
+  background-image: url("../../images/hero.png");
+  background-repeat: no-repeat;
+  // background-size: 100% !important;
+  background-position-y: 0px !important;
+  background-size: cover;
+
+  .top-sec {
+    padding: 70px 0px 100px;
+    @media (max-width: 500px) {
+      padding: 0;
+    }
+  }
+  .about-internet-money {
+    width: 100%;
+    padding: 50px 0px 50px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 67.19%,
+      #1f1f1f 100%
+    );
+
+    .secondaryHeading {
+      width: 100%;
+    }
+    .img-box {
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 100%;
+      }
+    }
+    .content-box {
+      padding-right: 15%;
+      padding-left: 25px;
+
+      @media (max-width: 700px) {
+        padding-left: 60px;
+      }
+
+      @media (max-width: 500px) {
+        padding: 25px;
+      }
+    }
+  }
+}
+
+.primary_btn {
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+  margin-top: 25px;
+  font-weight: 700;
+}
+.my-5 {
+  @media (max-width: 2560px) {
+    width: 100% !important;
+  }
+}

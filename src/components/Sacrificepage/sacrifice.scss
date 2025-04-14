@@ -1,0 +1,99 @@
+@import "../../styles/globalstyle.scss";
+
+.aboutHeroSection {
+  padding-top: 120px;
+  color: #fff;
+  margin: 10px auto 0px;
+  background-image: url("../../images/hero.png");
+  background-repeat: no-repeat;
+  background-position-y: 120px;
+  background-size: cover;
+  .top-sec {
+    padding: 70px 0px 100px;
+    @media (max-width: 500px) {
+      padding: 0;
+    }
+  }
+
+  &__detailsWrapper {
+    margin-bottom: 15px;
+  }
+
+  &__secondaryHeading {
+    font-size: 18px;
+    font-weight: 700;
+    color: $theme-color;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+
+    @media (max-width: 900px) {
+      text-align: center;
+    }
+  }
+  .about-internet-money {
+    width: 100%;
+    padding: 50px 0px 50px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 67.19%,
+      #1f1f1f 100%
+    );
+
+    .img-box {
+      display: flex;
+      align-items: center;
+      @media (max-width: 900px) {
+        margin-bottom: 2rem;
+      }
+      img {
+        max-width: 100%;
+        margin: 0 auto;
+
+        @media (max-width: 900px) {
+          max-width: 200px !important;
+        }
+      }
+    }
+    .content-box {
+      padding-right: 15%;
+      padding-left: 25px;
+
+      .primaryHeading {
+        text-align: left !important;
+        @media (max-width: 900px) {
+          text-align: center !important;
+        }
+      }
+
+      @media (max-width: 900px) {
+        text-align: center;
+        padding: 10px 10% !important;
+      }
+
+      @media (max-width: 700px) {
+        padding-left: 60px;
+      }
+    }
+  }
+}
+
+.primary_btn {
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.primarybutton {
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+  margin-top: 25px !important;
+  font-weight: 700;
+
+  justify-content: flex-start !important;
+  display: flex;
+}

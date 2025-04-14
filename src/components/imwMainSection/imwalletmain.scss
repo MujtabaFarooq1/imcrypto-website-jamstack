@@ -1,0 +1,444 @@
+@import "../../styles/config"; 
+
+.imwallet-main-section{
+    padding: 6.25em 0;
+    position: relative;
+
+    // &:after{
+    //     content: "";
+    //     position: absolute;
+    //     height: 25em;
+    //     width: 100%;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 67.19%, #1F1F1F 100%);
+    //     z-index: 0;
+    // }
+    .container{
+        .section-header{
+            max-width:  49em;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+
+            h6{
+                font-size: $font-size-20;
+                font-weight: $weight-700;
+                line-height: 1em;
+                color: $white-color;
+                text-transform: uppercase;
+                margin-bottom: 1em;
+            }
+            h2{
+                font-size: $font-size-50;
+                font-weight: $weight-700;
+                line-height: 1.25em;
+                color: $theme-color;
+                margin-bottom:  0.5em;
+                text-transform: uppercase;
+                @include media(large){
+                    font-size: 3em;
+                }
+                @include media(medium){
+                    font-size: 2.7em;
+                }
+                @include media(small){
+                    font-size: 2.5em;
+                }
+            }
+            p{
+                font-size: $font-size-16;
+                font-weight: $weight-400;
+                line-height: 1.5em;
+                color: $white-color;
+                letter-spacing: 0.03em;
+                text-align: center;
+                margin: 0 auto;
+                opacity: 0.8;
+
+                @include media (small){
+                    line-height: 1.5em;
+                    // font-size: $font-size-20;
+                    max-width: 80%;
+                }
+            }
+        }
+        .imwallet-tab-section{
+            position: relative;
+            min-height: 700px;
+            
+            @include media(large){
+                min-height: 500px;
+            }
+            // @include media(medium){
+            //     min-height: auto;
+            // }
+            .tab-navbar{
+                width: 100%;
+                margin: 3.75em 0;
+                text-align: center;
+                ul{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    background-color: #151515;
+                    border: 2px solid #1F1f1f;
+                    border-radius: 26px;
+                    overflow: hidden;
+                    @include media(medium-small){
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    li{
+                        @include media(medium-small){
+                            width: 100%;
+                        }
+                        button{
+                            color: #dfdfdf;
+                            opacity: 0.3;
+                            font-size: $font-size-14;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            background-color: transparent;
+                            padding: 1em 3em;
+                            border-radius: 26px;
+                            position: relative;     
+                            
+                            &:before{
+                                    content:"";
+                                    background-color: transparent;
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    border-radius: 26px;
+                                    z-index: -1;
+                                    transition: transform 1s ease;
+                                }
+                                &:first-child{
+                                    &:before{
+                                        transition: transform 1s ease;
+                                        transform: translateX(0);
+                                    }
+                                    
+                                }
+                                &:nth-child(2){
+                                    &:before{
+                                        transition: transform 1s ease;
+                                        transform: translateX(180px);
+                                    }
+                                }
+                                &:nth-child(3){
+                                    &:before{
+                                        transition: transform 1s ease;
+                                        transform: translateX(360px);
+                                    }
+                                }
+                            &:hover{
+                                color: $theme-color;
+                                opacity: 1;
+                            }
+                            &.active{
+                                color: $black-color;
+                                opacity: 1;
+                                position: relative;
+                                z-index: 2;
+                                
+                                @include media(small){
+                                    width: 100%;
+                                }
+                                &:before{
+                                    content:"";
+                                    background-color: $theme-color;
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    border-radius: 26px;
+                                    z-index: -1;
+                                    transform: translateX(0);
+                                    transition: all 1s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }   
+            .imwallet-phone-section{
+                position: absolute;
+                transition: all ease 1s;
+                min-height: 50em;
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+                top: 8em;
+                left: 0;
+                right: 0;
+                @include media(large){
+                    position: static;
+                    min-height: auto;
+                }
+                @include media(large){
+                   display: none;
+                   &.active{
+                    display: block;
+                   }
+                }
+                &.right{
+                    &.active{
+                        &:before{
+                            left: 45%;
+                        }
+                        .imwallet-phone-right{
+                            transition: all 1s ease-in-out; 
+                            transform: rotate3d(0,0,0,0deg);
+                            p{
+                                text-align: left;
+                                @include media(large){
+                                    text-align: center;
+                                }
+                            }
+                            right: 50%;
+                        }
+                        .imwallet-phone-left{
+                            left: 50%;
+                            transition: all 1s ease-in-out; 
+                        }
+                    }
+                    .imwallet-phone-right{
+                        right: 0;
+                    }
+                    .imwallet-phone-left{
+                        left: 0;
+                    }
+                }
+                &.active{
+                    opacity: 1;
+                    pointer-events: inherit;
+                    visibility: visible;
+                    .imwallet-phone-right{
+                        right: 0;
+                    }
+                    .imwallet-phone-left{
+                        left: 0;
+                    }
+                }
+                &:before{
+                    content:"";
+                    background-image: url(../../images/Dot.png);
+                    background-repeat: no-repeat;
+                    background-position: top left;
+                    display: block;
+                    width: 12em;
+                    height: 12em;
+                    position: absolute;
+                    right:0;
+                    top:0;
+                    @include media(large){
+                        content: none;
+                    }
+                }
+                // @include media (medium){
+                //     display: block;
+                // }
+                .imwallet-phone-left{
+                    width: 50%;
+                    z-index: 1;
+                    transition: all 1s ease-in-out; 
+                    left: 50%;
+                    @include media(large){
+                        margin: 0 auto;
+                    }
+                    @include media (medium){
+                        // width: 100%;
+                        max-width: 80%;
+                        margin: 0 auto;
+                    }
+                    position: absolute;
+                    @include media(large){
+                        position: static;
+                    }
+                    > div{
+                        width: 100%;
+                        img{
+                            text-align: center;
+                            margin: 0 auto;
+                            display: block;
+                            width: 80%;
+                            margin: 0 auto;
+                        }
+                        .gatsby-image-wrapper-constrained{
+                            width: 50%;
+                            margin: 0 auto;
+                            display: block;
+                            text-align: center;
+                        }
+
+                        &::before, &::after{
+                            background-size: contain !important;
+                        }
+                    }
+                }
+                .imwallet-phone-right{
+                    @include media(small){
+                        text-align: center;
+                    }
+                    &:before{
+                        content:"";
+                        background-image: url(../../images/round.png);
+                        background-repeat: no-repeat;
+                        background-position: top left;
+                        display: block;
+                        width: 12em;
+                        height: 12em;
+                        position: absolute;
+                        left: -1em;
+                        top: 1em;
+                        @include media(large){
+                            content: none;
+                        }
+                    }
+                    width: 50%;
+                    padding: 3em;
+                    z-index: 1;
+                    position: absolute;
+                    right: 50%;
+                    transition: all 1s ease-in-out; 
+                    @include media (large){
+                        padding: 1.5em;
+                        position: static;
+                        margin: 2em auto 0;
+                        width: 100%;
+                    }
+                    // @include media (medium){
+                    //     width: 100%;
+                    // }
+
+
+                    h2{
+                        font-size: $font-size-50;
+                        font-weight: $weight-700;
+                        line-height: 1em;
+                        color: $theme-color;
+                        margin-bottom: 0.2em;
+                        text-align: left;
+                        @include media(wide){
+                            font-size:3em;
+                        }
+                        @include media(large){
+                            font-size:2.7em;
+                            text-align: center;
+                        }
+                        @include media(medium){
+                            font-size:2.5em;
+                        }
+                        @include media (small){
+                            text-align: center;
+                        }
+                    }
+
+                    p{
+                        font-size: $font-size-16;
+                        font-weight: $weight-400;
+                        line-height: 1.5em;
+                        color: $white-color;
+                        letter-spacing: 0.03em;
+                        @include media(large){
+                            text-align: center;
+                        }
+                        @include media (small){
+                            line-height: 1.5em;
+                            // font-size: $font-size-20;
+                        }
+                    }
+
+                    .im-wallet-download{
+                        display: flex;
+                        margin-top: 5.5em;
+
+                        @include media (large){
+                            margin-top:3em;
+                            justify-content: center;
+                            width: 100%;
+                        }
+                        
+                        @include media (small){
+                            display: block;
+                            justify-content: center;
+                        }
+
+                        button{
+                            padding: 0;
+
+                            // @include media (small){
+                            //     font-size: 1.25em;
+                            // }
+                            a{
+                                display: inline-block;
+                                background-color: $nav-btn-bgcolor;
+                                padding:  1.125em 4em 1.125em 1.6875em;
+                                font-size: $font-size-13;
+                                font-weight: $weight-bold;
+                                color: $theme-color;
+                                border: 0.075em solid $light-gray-color;
+                                border-radius: 3.75em;
+    
+                                &:hover{
+                                    background-color: $theme-color;
+                                    color: $black-color;
+                                }
+
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    right: 1.8em;
+                                    top: 1.5em;
+                                    background-image: url('../../images/path-yellow.png');
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    width: 1.5em;
+                                    height: 1.5em;
+    
+                                }
+    
+                                &:hover{
+    
+                                    &::after{
+                                        background-image: url('../../images/path.png');
+                                    }
+                                }
+                                
+                            }
+                        }
+
+                        ul{
+                            display: flex;
+                            margin-left: 1.375em;
+
+                            @include media (small){
+                                justify-content: center;
+                                margin-top: 1.5em;
+                            }
+                            li{
+                                margin: 0 1.25em 0 0;
+                                cursor: pointer;
+                                
+                                img{
+                                    width: 3em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

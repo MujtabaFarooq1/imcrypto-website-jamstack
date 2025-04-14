@@ -1,0 +1,338 @@
+@import "../../styles/config";
+
+.statistics-section {
+    margin: 1em 0 2em 0;
+
+    @include media(medium) {
+        margin: 2em 0 1em 0;
+    }
+
+    @include media(medium-small) {
+        margin: 2em 0 0.8em 0;
+    }
+
+    .container {
+        @include media(medium) {
+            padding: 0 1em;
+        }
+
+        @include media(medium-small) {
+            padding: 0;
+        }
+
+        ul{
+            li{
+                &.statistics-header-section {
+                    margin-bottom: 0;
+                    .statistics-title {
+                        @include media(medium) {
+                            font-size: 0.7em;
+                        }
+                        .statistics-main-title {
+                            font-size: $font-size-32;
+                            font-weight: 700;
+                            line-height: 1.5em;
+                            color: $theme-color;
+                            text-transform: uppercase;
+                        }
+                        .statistics-sub-title {
+                            margin-top: 1em;
+                            font-size: $font-size-28;
+                            font-weight: 700;
+                            line-height: 1.5em;
+                            color: $white-color;
+    
+                            @include media(small) {
+                                font-size: $font-size-20;
+                            }
+                        }
+        
+                    }
+        
+                    .stats-content {
+                        margin-top: 1.5em;
+        
+                        @include media(medium) {
+                            font-size: 0.7em;
+                        }
+        
+                        .stats-contract-address {
+                            max-width: 40.625em;
+                            margin: 0 auto;
+                            background-color: #303030;
+                            border-radius: 1.875em;
+                            padding: 1.3125em 2.4375em 1.75em 2.4375em;
+                            
+                            h6,
+                            p {
+                                font-size: $font-size-18;
+                                font-weight: 700;
+                                color: $white-color;
+                                opacity: 0.3;
+                                line-height: 1.5em;
+                            }
+        
+                            p {
+                                opacity: 1;
+                                display: block;
+                                line-break: anywhere;
+                                margin-top: 0.875em;
+                                word-break: break-all;
+                            }
+                        }
+        
+
+                        .stats-current-box-cover{
+                            display: flex;
+                            margin: 2em 0;
+                            @include media(small){
+                                display: block;
+                            }
+                            .stats-current-box{
+                                width: 45%;
+                                margin: 0 1em;
+                                padding: 2em;
+                                background-color: $product-row-bgcolor;
+                                border: 0.0625em solid #282828;
+                                border-radius: 1em;
+
+                                @include media(small){
+                                    width: 100%;
+                                    margin: 0 0 2em 0;
+                                }
+
+                                .current-box-title {
+        
+                                    h6,
+                                    p {
+                                        font-size: $font-size-16;
+                                        font-weight: 700;
+                                        line-height: 1.5em;
+                                        color: $white-color;
+                                    }
+
+                                    h6 {
+                                        margin-bottom: 0.5em;
+                                    }
+
+                                    p {
+                                        font-weight: 300;
+                                    }
+                                }
+
+                                .current-box-details {
+                                    margin-top: 0.2em;
+
+                                    p {
+                                        font-size: $font-size-18;
+                                        font-weight: 700;
+                                        color: $theme-color !important;
+                                    }
+                                }
+
+
+                            }
+
+                        }
+                        .stats-current {
+                            margin-top: 2.5625em;
+        
+                            ul {
+                                
+                                
+                                &.list-odd{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+
+                                    @include media(small) {
+                                        display: block;
+                                    }
+
+
+                                li {
+                                    width: 50%;
+                                    margin: 0 -2em;
+                                    @include media(small) {
+                                        width: 100%;
+                                        margin: 0 auto;
+                                        margin-top: 2em;
+                                    }
+                                    
+                                    .stats-current-box {
+                                        margin: 0 3em;
+                                        height: 100%;
+                                        background-color: $product-row-bgcolor;
+                                        padding: 1.875em;
+                                        border: 0.125em solid #282828;
+                                        border-radius: 1.5em;
+        
+                                        @include media(medium) {
+                                            padding: 1.125em;
+                                        }
+                                        @include media(very-small) {
+                                            width: 100%;
+                                            margin: 0 auto;
+                                        }
+        
+                                        .current-box-title {
+        
+                                            h6,
+                                            p {
+                                                font-size: $font-size-16;
+                                                font-weight: 700;
+                                                line-height: 1.5em;
+                                                color: $white-color;
+                                            }
+        
+                                            h6 {
+                                                margin-bottom: 0.5em;
+                                            }
+        
+                                            p {
+                                                font-weight: 300;
+                                            }
+                                        }
+        
+                                        .current-box-details {
+                                            margin-top: 0.2em;
+        
+                                            p {
+                                                font-size: $font-size-18;
+                                                font-weight: 700;
+                                                color: $theme-color !important;
+                                            }
+                                        }
+
+                                        .statistics-inner{
+                                            background-color: red;
+                                        }
+                                       
+                                    }
+
+                                    &:last-child{
+                                        margin-top: 2em
+                                    }
+
+
+                                }
+                                }
+                                 
+                                li{
+                                    .stats-current-box{
+                                        .statistics-coin-section {
+                                            padding: 1.5em 0 2em 0;
+                                            border-top: 0.0625em solid #333333;
+                        
+                                            .statistics-title{
+                                                @include media(medium) {
+                                                    font-size: 1em;
+                                                }
+                                                 .statistics-main-title{
+                                                    font-size: $font-size-20;
+                                                    font-weight: 700;
+                                                    color: $theme-color;
+                                                    text-transform: uppercase;
+                                                }
+                                                .statistics-sub-title{
+                                                    font-size: $font-size-16;
+                                                    font-weight: 700;
+                                                    color: $white-color;
+                                                    margin-top: 0.5em;
+                                                    @include media(medium) {
+                                                        font-size: $font-size-20;
+                                                    }
+                                                }
+                                                .coming-soon-title {
+                                                    font-size: $font-size-32;
+                                                    font-weight: 700;
+                                                    color: $white-color;
+                                                    opacity: 0.2;
+                                                    margin: 1em 0 0.25em 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+        
+                            }
+        
+                        }
+        
+                        .stats-total-liquidity {
+                            margin: 0 auto;
+                            margin-bottom: 4em;
+                            max-width: 28em;
+        
+                            .stats-liquidity-box {
+                                background-color: $product-row-bgcolor;
+                                padding: 1.875em;
+                                border: 0.125em solid #282828;
+                                border-radius: 1.5em;
+        
+                                
+                                h4{
+                                    font-size: $font-size-22;
+                                    font-weight: 700;
+                                    line-height: 1.5em;
+                                    color: $white-color;
+                                }
+                                h5{
+                                    font-size: $font-size-20;
+                                    font-weight: 700;
+                                    line-height: 1.5em;
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                &.statistics-coin-section {
+                    padding: 1.5em 0 2em 0;
+                    border-top: 0.0625em solid #333333;
+
+                    @include media(medium-small) {
+                        font-size: 0.8em;
+                    }
+
+                    .statistics-title{
+                         .statistics-main-title{
+                            font-size: $font-size-20;
+                            font-weight: 700;
+                            color: $theme-color;
+                            text-transform: uppercase;
+                        }
+                        .statistics-sub-title{
+                            font-size: $font-size-16;
+                            font-weight: 700;
+                            color: $white-color;
+                            margin-top: 0.5em;
+                        }
+                    }
+
+                    .coin-row-setion{
+                        @include media(medium) {
+                            font-size: 0.7em;
+                        }
+                        .coming-soon-title {
+                            font-size: $font-size-32;
+                            font-weight: 700;
+                            color: $white-color;
+                            opacity: 0.2;
+                            margin: 1em 0 0.25em 0;
+                            @include media(small) {
+                                margin-top: 0.5em;
+                                font-size: $font-size-34;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+}

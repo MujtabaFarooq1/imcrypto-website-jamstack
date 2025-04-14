@@ -1,0 +1,37 @@
+@import "../../../styles//globalstyle.scss";
+
+.mainButton {
+  display: inline-block;
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+  color: #000000;
+  margin: 2rem 0px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14.4px;
+  line-height: 22px;
+  padding: 18px 42px 18px 42px;
+  text-transform: uppercase;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  &:hover {
+    background-color: #1d1d1d;
+    color: #fba81a;
+    border: 0.125em solid #737373;
+    cursor: pointer;
+  }
+
+  &__container {
+    display: block;
+    width: 100%;
+
+    &__center {
+      text-align: center;
+    }
+  }
+  @include media(small) {
+    padding: 14px 30px 14px 30px;
+  }
+}

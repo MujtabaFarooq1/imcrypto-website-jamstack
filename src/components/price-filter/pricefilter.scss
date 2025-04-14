@@ -1,0 +1,175 @@
+@import "../../styles/config"; 
+
+.price-filter{
+    background-color: $product-row-bgcolor;
+    border: 0.125em solid $product-row-bordercolor;
+    border-radius: 1em;
+    padding: 1.4375em 1.875em;
+    margin-top: 1.875em;
+    max-width: 400px;
+
+    @include media (large) {
+        padding: 1.4375em;
+    }    
+    @include media (medium) {
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2.625em;
+    }
+    @include media (very-small) {
+        max-width: 100%;
+        padding: 1em;
+    }
+
+    .merch-filter{
+        padding: 1.5em 0 1.5em 0;
+        h6{
+            font-size: $font-size-18;
+            font-weight: 700;
+            line-height: 1.5em;
+            color: $theme-color;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+       
+        input{
+            max-width: 400px;
+
+            @include media (medium) {
+                width: 100%;
+                max-width: 100%;
+            }
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: $theme-color; 
+                cursor: pointer;
+            }
+            
+          }
+  
+          
+
+          span{
+            font-size: $font-size-16;
+            line-height: 1.5em;
+            font-weight: 400;
+            color: $white-color;
+            margin-top: 0.5em;
+            display: block;
+          }
+
+          label{
+            font-size: $font-size-16;
+            font-weight: 300;
+            line-height: 1em;
+            color: $light-gray-color;
+            text-align: center;
+            display: block;
+            margin-top: 2.5em;
+            opacity: 0.6;
+          }
+    }
+
+    .merchpage-rating{
+        margin-bottom: 1em;
+        .dividerline{
+            background-color: #373737;
+            height: 1px;
+            border-radius: 26px;
+            margin-bottom: 1em;
+        }
+        .product-rating-details{
+            display: flex;
+            align-items: center;
+            padding: 1em 0 2.5em 0;
+
+            ul{
+                display: flex;
+                align-items: center;
+                margin-right: 2em;
+
+                li{
+                    cursor: pointer;
+                    img{
+
+                    }
+                }
+            }
+            p{
+                font-size: $font-size-14;
+                line-height: 1em;
+                font-weight: 400;
+                color: $light-gray-color;
+            }
+        }
+
+        span{
+            font-size: $font-size-16;
+            line-height: 1.5em;
+            font-weight: 400;
+            color: $white-color;
+            margin-top: 0.5em;
+            display: block;
+        }
+
+        .filter-button{
+            display: flex;
+            justify-content: center;
+            @include media(medium-large){
+                flex-direction: column;
+            }
+            @include media(medium){
+                flex-direction: row;
+                align-items: center;
+            }
+
+            button{
+                margin: 0;
+                padding: 0;
+                @include media(medium-large){
+                    &:first-child{
+                        margin: 0 0 2em 0;
+                    }
+                }
+                @include media(large){
+                    font-size: 0.875em;
+                }
+                @include media(medium){
+                    &:first-child{
+                        margin: 0;
+                    }
+                }
+                    a{
+                        cursor: pointer;
+                        font-size: $font-size-14;
+                        font-weight: 600;
+                        color: $theme-color;
+                        background-color: $product-row-bgcolor;
+                        border: 0.125em solid $product-row-bordercolor;
+                        border-radius: 3.75em;
+                        margin: 0 0.5em;
+                        padding: 0.7em  1.5em;
+                        @include media (very-small) {
+                            max-width: 100%;
+                            padding: 0.5em 0.8em;
+                        }
+                        &:hover{
+                            background-color: $theme-color;
+                            color: $black-color !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+

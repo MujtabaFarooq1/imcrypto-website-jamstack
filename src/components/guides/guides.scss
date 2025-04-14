@@ -1,0 +1,355 @@
+@import "../../styles/config";
+
+.guide-section {
+    background-color: $black-color;
+    padding: 8.25em 0 6.25em 0;
+    position: relative;
+    z-index: 1;
+
+    @include media (small) {
+        padding: 5em 0 4em 0;
+    }
+    @include media (very-small) {
+        padding: 3em 0 4em 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -16em;
+        left: 0;
+        right: 0;
+        background-image: url('../../images/guide-banner.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 20em;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 67.19%, #1F1F1F 100%);
+        z-index: 1;
+    }
+
+    .container {
+        .guide-inner-section {
+            z-index: 2;
+            position: relative;
+
+            .section-header {
+                // max-width:  52.4375em;
+                max-width: 61.563em;
+                margin: 0 auto;
+
+                // @include media (large) {
+                //     font-size: 0.8em;
+                // }
+
+                // h6 {
+                //     font-size: $font-size-20;
+                //     font-weight: $weight-700;
+                //     line-height: 1em;
+                //     color: $white-color;
+                //     text-transform: uppercase;
+                //     margin-bottom: 1em;
+                // }
+
+                // h1 {
+                //     font-size: $font-size-50;
+                //     font-weight: $weight-700;
+                //     line-height: 1em;
+                //     color: $theme-color;
+                //     margin-bottom: 0.5em;
+                // }
+
+                // p {
+                //     font-size: $font-size-16;
+                //     font-weight: $weight-400;
+                //     line-height: 1.5em;
+                //     color: $white-color;
+                //     letter-spacing: 0.03em;
+                //     text-align: center;
+
+                //     @include media (small) {
+                //         line-height: 1.5em;
+                //         font-size: $font-size-20;
+                //     }
+                // }
+            }
+
+            .guides-col-cover {
+                margin-top: 6em;
+
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: 1fr;
+                    grid-column-gap: 3.1875em;
+                    grid-row-gap: 0px;
+                    padding: 5em 0;
+                    border: 0.125em dashed $border-dashed-color;
+                    border-radius: 1.875em;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        background: rgba(0, 0, 0, 0.5);
+                        backdrop-filter: blur(30px);
+                        border-radius: 30px;
+                    }
+
+                    @include media (medium) {
+                        > div{
+                        display: none;
+                        &:nth-child(2){
+                            display: block;
+                        }
+                        &:first-child{
+                            display: block;
+                        }
+                        }
+                    }
+
+                    @include media (medium) {
+                        display: block;
+                    }
+
+                    @include media (medium-small) {
+                        padding: 2em 0;
+                    }
+
+                    li {
+                        background-color: #181818;
+                        // border: 2px solid #282828;
+                        border-radius: 1.625em;
+                        position: relative;
+
+                        @include media (medium-large) {
+                            min-height: 34em;
+                        }
+
+                        @include media (medium) {
+                            max-width: 70%;
+                            margin: 0 auto;
+                            margin-bottom: 2em;
+                            min-height: 27em;
+                        }
+
+                        @include media (medium-small) {
+                            max-width: 90%;
+                            // font-size: 0.8em
+                        }
+
+                        .blur-cover {
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            z-index: 2;
+                            background: rgba(0, 0, 0, 0.6);
+                            backdrop-filter: blur(14px);
+                            border-radius: 26px;
+
+                            @include media (wide) {
+                                border-radius: 12px;
+                            }
+
+                        }
+
+                        .blur-cover {
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            z-index: 2;
+                            background: rgba(0, 0, 0, 0.6);
+                            backdrop-filter: blur(14px);
+                            border-radius: 26px;
+
+                            @include media (wide) {
+                                border-radius: 12px;
+                            }
+
+                        }
+
+
+                    }
+
+                    .overlay-text {
+                        width: 40%;
+                        z-index: 3;
+                        position: absolute;
+                        top: 40%;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        display: block;
+                        margin: 0 auto;
+
+                        @include media (wide) {
+                            width: 50%;
+                        }
+
+                        @include media (medium) {
+                            width: 75%;
+                            // font-size: 0.8em;
+                        }
+
+                        @include media (medium-small) {
+                            width: 90%;
+                        }
+
+                        @include media (very-small) {
+                            width: 100%;
+                            // font-size: 0.7em;
+                        }
+
+
+                        .overlay-header {
+                            h2 {
+                                font-size: 3.5625em;
+                                line-height: 1.25em;
+                                font-weight: 700;
+                                margin: 0 0 0.5em 0;
+                                letter-spacing: 0.125em;
+                                text-shadow: 2px 0 $theme-color, -2px 0 $theme-color, 0 2px $theme-color, 0 -2px $theme-color,
+                                    1px 1px $theme-color, -1px -1px $theme-color, 1px -1px $theme-color, -1px 1px $theme-color;
+                                @include media(wide){
+                                    font-size: 3.5em; 
+                                }
+                                @include media(large){
+                                    font-size: 3.3em; 
+                                }
+                                @include media(medium){
+                                    font-size: 3em; 
+                                }
+                                @include media(very-small){
+                                    font-size: 2.7em; 
+                                }
+                               
+                            }
+
+                            h6 {
+                                font-size: 1.8125em;
+                                font-weight: $weight-400;
+                                line-height: 1.25em;
+                                text-align: center;
+                                letter-spacing: 0.03em;
+                                color: $white-color;
+                                @include media(wide){
+                                    font-size: 1.8em; 
+                                }
+                                @include media(large){
+                                    font-size: 1.7em; 
+                                }
+                                @include media(medium){
+                                    font-size: 1.5em; 
+                                }
+                                @include media(medium){
+                                    font-size: 1.4em; 
+                                }
+                                @include media(very-small){
+                                    font-size: 1.2em; 
+                                }
+                            }
+                        }
+
+                        .visit-btn {
+                            display: block;
+                            text-align: center;
+                            margin-top: 2em;
+
+                            a {
+                                display: inline-block;
+                                background-color: $theme-color;
+                                padding: 1.161875em 4.970625em 1.161875em 2.625em;
+                                font-size: $font-size-14;
+                                font-weight: $weight-bold;
+                                color: $black-color;
+                                border: 0.075em solid $light-gray-color;
+                                border-radius: 3.75em;
+                                position: relative;
+                                text-transform: uppercase;
+
+                                &:hover {
+                                    background-color: $nav-btn-bgcolor;
+                                    color: $theme-color;
+                                }
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    right: 2.5em;
+                                    top: 1.4em;
+                                    background-image: url('../../images/path.png');
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    width: 1.5em;
+                                    height: 1.5em;
+
+                                }
+
+                                &:hover {
+
+                                    &::after {
+                                        background-image: url('../../images/path-yellow.png');
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+            .viewMore-guides {
+                text-align: center;
+                margin-top: 3.125em;
+
+
+                button {
+                    padding: 0;
+
+                    a {
+                        display: inline-block;
+                        background-color: $theme-color;
+                        padding: 1em 2.625em;
+                        font-size: $font-size-13;
+                        font-weight: $weight-bold;
+                        color: $nav-btn-bgcolor;
+                        border: 0.075em solid $light-gray-color;
+                        border-radius: 3.75em;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            background-color: $nav-btn-bgcolor;
+                            color: $theme-color;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,143 @@
+@import "../../styles/config";
+.dropDownBtn {
+  position: relative;
+  width: max-content;
+
+  &--mobilecenter {
+    @include media(small) {
+      margin: 0 auto;
+    }
+
+    button {
+      margin: 0 auto;
+    }
+  }
+
+  &__label {
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $theme-color;
+    padding: 0.6375em 1.575em !important;
+    font-size: 13px !important;
+    font-weight: $weight-bold;
+    color: $black-color;
+    border: 0.075em solid $light-gray-color;
+    border-radius: 3.75em;
+    text-transform: uppercase;
+
+    svg {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color: $nav-btn-bgcolor;
+      color: $theme-color;
+
+      svg {
+        * {
+          fill: $theme-color;
+        }
+      }
+    }
+  }
+
+  &__item {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px !important;
+    width: 100%;
+    margin: 0px !important;
+    border-bottom: 1px solid #737373 !important;
+    flex-wrap: wrap;
+
+    @include media(medium-large) {
+      padding: 5px 10px !important;
+    }
+
+    &:last-child {
+      border-bottom: 0px !important;
+    }
+
+    &:hover {
+      background-color: #000;
+    }
+
+    &__txt {
+      font-weight: normal;
+      font-size: 13px !important;
+      text-align: left !important;
+      color: $theme-color !important;
+      margin: 0px !important;
+      width: max-content;
+      text-transform: initial;
+
+      span {
+        font-weight: 600;
+      }
+
+      @include media(medium-large) {
+        font-size: 0.8rem !important;
+      }
+
+      @include media(small) {
+        font-size: 15px !important;
+      }
+    }
+
+    &__comingsoon {
+      display: block;
+      width: 100%;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      text-align: center !important;
+      color: $theme-color !important;
+    }
+
+    &__img {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+      @include media(medium-large) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__items {
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: max-content;
+    overflow: hidden;
+    // padding: 10px 0px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+    max-height: 0;
+    transition: 0.5s ease-in;
+    z-index: 9999;
+
+    &--open {
+      max-height: 100vh;
+      border: 1px solid #737373;
+      background-color: #1d1d1d;
+      overflow: hidden;
+    }
+
+    &--close {
+      max-height: 0px;
+      overflow: hidden;
+    }
+
+    @include media(medium-large) {
+      position: relative;
+      top: 5px;
+    }
+  }
+}

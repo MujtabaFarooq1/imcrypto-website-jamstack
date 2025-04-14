@@ -1,0 +1,12 @@
+@import "../../../styles/globalstyle.scss";
+.expandColapsableText {
+  &__colapseToggle {
+    color: $theme-color;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      color: darken($color: $theme-color, $amount: 9);
+    }
+  }
+}

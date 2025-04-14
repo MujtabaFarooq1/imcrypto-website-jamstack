@@ -1,0 +1,129 @@
+@import "../../styles/config";
+
+.guides-col{
+    position: relative;
+    min-height: 24em;
+    cursor: pointer;
+
+    @include media (medium){
+       min-height: auto;
+    }
+
+    .guides-img-cover{
+        display: inline-block;
+
+        div{
+            display: block;
+            background-color: #181818;
+            border: 2px solid #282828;
+            border-radius: 1.625em;
+            height: 28em;
+            padding: 3.125em 3.625em;
+
+            .bg-img{
+                background-size: 100%;
+                position: relative;
+                border-radius: 30px;
+ 
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    -webkit-transition: all ease-in 0.2s;
+                    -moz-transition: all ease-in 0.2s;
+                    transition: all ease-in 0.2s;
+                    border-radius: 30px;
+                }
+            }
+
+            @include media (medium){
+                height: auto;
+             }
+             @include media (small){
+                padding: 1.5em 2em;
+             }
+             
+
+        h3{
+            font-size: $font-size-32;
+            font-weight: $weight-700;
+            line-height: 1.5em;
+            color: $theme-color;
+            text-align: left;
+        }
+    
+        p{
+            font-size: $font-size-18;
+            line-height: 1.25em;
+            letter-spacing: 0.03em;
+            color: #A2A2A2;
+            margin: 1em 0;
+        }
+
+        button{
+            padding: 0;
+            margin-top: 1.875em;
+            a{
+                display: inline-block;
+                background-color: $nav-btn-bgcolor;
+                padding:  1em 2.625em;
+                font-size: $font-size-13;
+                font-weight: $weight-bold;
+                color: $theme-color;
+                border: 0.075em solid $light-gray-color;
+                border-radius: 3.75em;
+                text-transform: uppercase;
+            }
+        }
+
+        &:hover{
+            background-color: none !important;
+        }
+        }
+
+  
+
+    }
+
+    &:hover{
+
+        .guides-img-cover{
+
+
+                .bg-img{
+                    position: relative;
+                    &::after{
+                        content: '';
+                         background-size: 140%;
+                         border-radius: 30px;
+                    }
+                }
+               
+       
+
+            button{
+                a{
+                    background-color: $theme-color;
+                    color: $nav-btn-bgcolor;
+                }
+            }
+        }
+
+    }
+
+    .blur-cover{
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        backdrop-filter: blur(6px);
+        border-radius: 30px;
+
+        @include  media (wide){
+            border-radius: 12px;
+        }
+    }
+}

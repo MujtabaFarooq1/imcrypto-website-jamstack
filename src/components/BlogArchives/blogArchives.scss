@@ -1,0 +1,16 @@
+@import "../../styles/config";
+
+.blogArchives {
+  &__item {
+    font-weight: 500;
+    font-size: 16.6935px;
+    text-transform: capitalize;
+    color: $archive-text-color;
+    margin-bottom: 1rem;
+    display: block;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}

@@ -1,0 +1,193 @@
+/* =====Fonts============================================================================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+// Variables
+
+$dark-gray-color: #4e647d;
+$white-color: #ffffff;
+$black-color: #000000;
+$body-bgcolor: #ffffff;
+$dark-theme-color: #285bb1;
+$darkest-theme-color: #1a296c;
+$orange-color: #ff5131;
+$dark-orange-color: #da3010;
+$white-color: #ffffff;
+$black-color: #000000;
+$lightBlue-color: #e4f2ff;
+$body-bgcolor: #f5f5f5;
+$text-color: #4e647d;
+$bullet-blue-color: #7cacff;
+$bullet-bg-color: #d5dae0;
+$dark-grey-color: #000c33;
+$tr-border-color: #d9e0e8;
+$link-color: #2978ff;
+$sky-blue: #f5f8ff;
+
+$archive-text-color: #b7b7b7;
+
+$nav-btn-bgcolor: #1d1d1d;
+$theme-color: #fba81a;
+$light-gray-color: #434343;
+$gray-bg-color: #232323;
+$product-row-bgcolor: #181818;
+$product-row-bordercolor: #282828;
+$light-gray-color: #737373;
+$plus-gray-color: #515151;
+$gray-shade-color: #2d2d2d;
+$gray-151515: #151515;
+$border-dashed-color: #2c2c2c;
+
+//Input Colors
+$primary-black-background: #151515;
+$secondary-black-background: #1f1f1f;
+
+// Responsive breakpoints
+
+$breakpoint-wide: 1600px;
+$breakpoint-extra-large: 1440px;
+$breakpoint-large: 1280px;
+$breakpoint-medium-large: 1100px;
+$breakpoint-medium: 999px;
+$breakpoint-small: 767px;
+$breakpoint-medium-small: 640px;
+$breakpoint-very-small: 480px;
+$breakpoint-very-medium-small: 400px;
+$breakpoint-se-device: 380px;
+$breakpoint-extra-small: 320px;
+
+
+// Fonts
+
+$baseFont: "Poppins";
+$latoFont: "Lato", sans-serif;
+$normal: normal;
+$italic: italic;
+$weight-normal: normal;
+$weight-light: lighter;
+$weight-400: 400;
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+$weight-bold: bold;
+
+$font-size-10: 0.625em;
+$font-size-12: 0.75em;
+$font-size-13: 0.813em;
+$font-size-14: 0.875em;
+$font-size-15: 0.938em;
+$font-size-16: 1em;
+$font-size-17: 1.1em;
+$font-size-18: 1.125em;
+$font-size-20: 1.25em;
+$font-size-22: 1.375em;
+$font-size-24: 1.5em;
+$font-size-25: 1.5625em;
+$font-size-26: 1.625em;
+$font-size-28: 1.75em;
+$font-size-30: 1.875em;
+$font-size-32: 2em;
+$font-size-34: 2.125em;
+$font-size-40: 2.5em;
+$font-size-42: 2.625em;
+$font-size-46: 2.875em;
+$font-size-50: 3.125em;
+$font-size-52: 3.25em;
+$font-size-65: 4em;
+$font-size-72: 4.5em;
+$font-size-75: 4.6875em;
+
+$character-spacing-0: 0px;
+$transform-uppercase: uppercase;
+
+//media
+
+@mixin box-sizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+@mixin placeholder {
+  opacity: 1;
+  font-size: $font-size-16;
+  color: $placeholder;
+  font-weight: $weight-normal;
+}
+@mixin media($breakpoint) {
+  @if $breakpoint == wide {
+    @media (max-width: $breakpoint-wide) {
+      @content;
+    }
+  } @else if $breakpoint == extra-large {
+    @media (max-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $breakpoint == medium-large {
+    @media (max-width: $breakpoint-medium-large) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $breakpoint == medium-small {
+    @media (max-width: $breakpoint-medium-small) {
+      @content;
+    }
+  } @else if $breakpoint == very-small {
+    @media (max-width: $breakpoint-very-small) {
+      @content;
+    }
+  } @else if $breakpoint == very-medium-small {
+    @media (max-width: $breakpoint-very-medium-small) {
+      @content;
+    }
+  } @else if $breakpoint == se-device {
+    @media (max-width: $breakpoint-se-device) {
+      @content;
+    }
+  }@else if $breakpoint == extra-small {
+    @media (max-width: $breakpoint-extra-small) {
+      @content;
+    }
+  }
+}
+
+//common placeholder
+
+// %common-footerbtm {
+//   font-weight: bold;
+//   font-size: $font-size-12;
+//   color: rgba(255, 255, 255, 0.9);
+//   @include media(medium) {
+//     font-size: $font-size-10;
+//   }
+// }
+// %common-slick-psuedo {
+//   opacity: 1;
+//   color: $arrow-color;
+//   color: $white-color;
+//   content: url("../Images/slider-arrow.png");
+//   line-height: unset;
+//   object-fit: cover;
+// }
+// %common-slick-hover-focus {
+//   color: $arrow-color;
+//   background: $arrow-color;
+// }
+
+//Light Theme
+
+.light-theme {
+  background-color: $white-color;
+}

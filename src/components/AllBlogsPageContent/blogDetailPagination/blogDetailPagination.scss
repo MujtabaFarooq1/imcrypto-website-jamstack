@@ -1,0 +1,90 @@
+@import "../../../styles/config";
+.blogPagination {
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #282828;
+    border-radius: 26px;
+    background: #181818;
+    padding: 25px;
+    margin-bottom: 30px;
+    align-items: center;
+    @media (max-width: 430px) {
+        gap: 5px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .blogPagination__btn--end {
+        background: #1d1d1d;
+        border: 1.2px solid #434343;
+        border-radius: 60px;
+        color: $theme-color;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16.0857px;
+        text-transform: uppercase;
+        padding: 8px 27px 8px 27px;
+        align-items: center;
+        text-align: center;
+        cursor: not-allowed;
+        margin: 10px 0px 10px 0px;
+        white-space: nowrap;
+        @media (max-width: 450px) {
+            display: block;
+        }
+        .blogPagination__btn__icon {
+            * {
+                fill: $theme-color;
+                stroke: $theme-color;
+            }
+        }
+        &:hover {
+            background: #1d1d1d;
+            border: 1.2px solid #434343;
+            color: $theme-color;
+            .blogPagination__btn__icon {
+                * {
+                    fill: $theme-color;
+                    stroke: $theme-color;
+                }
+            }
+        }
+        &--active {
+            cursor: pointer;
+            &:hover {
+                background-color: $theme-color;
+                color: $black-color;
+                border-color: $theme-color;
+                transition: 0.5s;
+                .blogPagination__btn__icon {
+                    * {
+                        fill: $black-color;
+                        stroke: $black-color;
+                    }
+                }
+            }
+        }
+        @media (max-width: 530px) {
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 10px;
+        }
+        .blogPagination__btn--left-icon {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .blogPagination__btn--right-icon {
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    }
+    .blogPagination__btn--normal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.w-mx-100 {
+    max-width: 100%;
+}

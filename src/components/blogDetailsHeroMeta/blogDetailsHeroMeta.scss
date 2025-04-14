@@ -1,0 +1,30 @@
+@import "../../styles/config";
+.blogDetailHeroMeta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    margin-bottom: 2rem;
+    padding: 2rem 0px;
+    &__date {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        @include media(very-small) {
+            margin-left: 0rem;
+        }
+    }
+    @include media(very-small) {
+        font-size: 18px;
+    }
+    &__profile {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        .authorName {
+            margin: 0px 10px;
+            white-space: nowrap;
+        }
+    }
+}

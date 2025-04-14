@@ -1,0 +1,48 @@
+.desclaimerPopup {
+  text-align: center;
+
+  &__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41px;
+    text-transform: uppercase;
+
+    color: #fba81a;
+
+    @media (max-width: 1024px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 19px;
+    }
+  }
+
+  &__desc {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    color: #fff;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+
+    &__yellow {
+      color: #fba81a;
+    }
+  }
+}

@@ -1,0 +1,213 @@
+@import "../../styles/globalstyle.scss";
+
+.PoolCalculators {
+  padding-top: 65px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  &__toaster {
+    max-width: 300px;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    width: 85%;
+  }
+
+  &__heading {
+    color: #fba81a;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+
+    @media (max-width: $breakpoint-small) {
+      font-size: 24px;
+    }
+  }
+
+  &__box {
+    background-color: #1e1e1e;
+    border-radius: 2rem;
+    padding: 0px;
+    padding-top: 2rem;
+    border: 2px solid #282828;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  &__values {
+    margin-top: 1rem;
+    &__item {
+      border: 2px solid #282828;
+      padding: 2rem 10px;
+      text-align: center;
+      border-left: 0px;
+      border-bottom: 0px;
+
+      &:nth-child(even) {
+        border-right: 0px;
+      }
+      @media (max-width: 1024px) {
+        border: none;
+        border-bottom: 1px solid #282828;
+        border-top: 2px solid #282828;
+      }
+
+      @media (max-width: 768px) {
+        border-right: 0px;
+      }
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+
+      &__heading {
+        font-weight: 700;
+        font-size: 17px;
+      }
+
+      &__desc {
+        margin-top: 10px;
+        font-size: 15px;
+        color: #fba81a !important;
+        font-weight: 700;
+        word-break: break-all;
+      }
+    }
+  }
+
+  &__boxes {
+  }
+
+  .PoolCalculators__box {
+    .PoolCalculators__formWrap {
+      padding: 0 2em;
+      @media (max-width: 640px) {
+        padding: 0 0.5em;
+      }
+      @media (max-width: 480px) {
+        padding: 0 0.1em;
+      }
+      .poolb-input-row {
+        form {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          input {
+            margin: 0;
+          }
+          .pool-submit-btn {
+            margin-left: 1em;
+            input {
+              background-color: #fba81a;
+              padding: 9px 25px;
+              color: black;
+              border-radius: 2rem;
+              margin: 0;
+              font-weight: 600;
+              width: 100%;
+              border: 0.075em solid #737373;
+              &:hover {
+                background-color: transparent;
+                color: #fba81a;
+              }
+            }
+          }
+        }
+      }
+      .row {
+        width: 100%;
+        display: block;
+        .primaryBtn {
+          border: 0.075em solid #737373;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 1em;
+          margin-bottom: 3em;
+          display: block;
+          background-color: #fba81a;
+          color: #000;
+          border-radius: 5em;
+          font-weight: 600;
+          font-size: 16px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: transparent;
+            color: #fba81a;
+          }
+        }
+      }
+      form {
+        div {
+          margin-bottom: 1em;
+          p {
+            font-size: 0.8em;
+            line-height: 1em;
+            color: red !important;
+            margin: 0.35em 0.15em 0 1.45em;
+          }
+        }
+      }
+    }
+  }
+  // -------- Input Stuff
+  input.primaryInput {
+    background: #151515;
+
+    border-radius: 2rem;
+    border: 3px solid #1f1f1f;
+    padding: 23px 15px;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 13px;
+      @media (max-width: 640px) {
+        font-size: 10px;
+      }
+      @media (max-width: 480px) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  button.primaryBtn {
+    background-color: #fba81a;
+    padding: 10px 5px;
+    color: black;
+    border-radius: 2rem;
+    margin: 0;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 4px;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.full_width_item {
+  border: 0px;
+  border-top: 2px solid #282828;
+}
+
+.pd-0 {
+  padding: 0px !important;
+}
+
+.PoolCalculators__values__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.poweredByText {
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0px;
+}

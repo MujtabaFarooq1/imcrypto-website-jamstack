@@ -1,0 +1,114 @@
+.Scrifice_Description_Section {
+  .description_heading {
+    margin: 70px 0 40px 0px;
+    .text {
+      color: #fba81a;
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .description_content {
+    &_container {
+      width: 50%;
+      margin: 0 auto;
+      @media (max-width: 992px) {
+        width: 80%;
+      }
+      @media (max-width: 480px) {
+        width: 90%;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+        opacity: 0.8;
+        text-align: start;
+        @media (max-width: 480px) {
+          margin-bottom: 2em;
+        }
+      }
+
+      h3,
+      h4 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 51px;
+        color: #fba81a;
+        &:hover{
+          background: transparent;
+          .btn_text{
+            &:hover{
+              color: #fba81a;
+            }
+          }
+        }
+        text-align: start;
+        @media (max-width: 480px) {
+          line-height: 32px;
+          margin-top: 1em;
+        }
+      }
+      h3 {
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        margin: 1.5rem 0px;
+        div {
+          background-size: contain !important;
+        }
+      }
+    }
+
+    width: 50%;
+    margin: 0 auto;
+    @media (max-width: 992px) {
+      width: 80%;
+    }
+    .content_heading {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 51px;
+      color: #fba81a;
+      text-align: start;
+    }
+    .content_data {
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      opacity: 0.8;
+      text-align: start;
+    }
+  }
+  .img_text {
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    color: #fba81a;
+    margin: 40px 0px 40px 0px;
+  }
+  .content_main_img {
+    width: 50%;
+    margin: 0 auto;
+    @media (max-width: 992px) {
+      width: 80%;
+    }
+    .content_img {
+      margin-bottom: 40px;
+    }
+  }
+  .description_content_container{
+    p{
+      margin-bottom: 2em;
+    }
+  }
+}

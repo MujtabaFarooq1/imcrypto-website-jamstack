@@ -1,0 +1,409 @@
+@import "../../styles/config";
+
+.purpose-section {
+  background-color: $black-color;
+  position: relative;
+  z-index: 2;
+
+  .lines-bg {
+    height: 7em;
+    width: 100%;
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 67.19%,
+      #1f1f1f 100%
+    );
+  }
+
+  .container {
+    .purpose-inner-section {
+      padding: 6.25em 0;
+
+      padding-bottom: 0px;
+
+      .section-header {
+        // max-width:  52.4375em;
+        max-width: 52em;
+        margin: 0 auto;
+
+        // @include media (large){
+        //     font-size: 0.8em;
+        // }
+
+        // h6{
+        //     font-size: $font-size-20;
+        //     font-weight: $weight-600;
+        //     line-height: 1em;
+        //     color: $white-color;
+        //     text-transform: uppercase;
+        //     margin-bottom: 1em;
+        // }
+        // h2{
+        //     font-size: $font-size-50;
+        //     font-weight: $weight-700;
+        //     line-height: 1em;
+        //     color: $theme-color;
+        //     margin-bottom:  0.5em;
+        // }
+        // p{
+        //     font-size: $font-size-16;
+        //     font-weight: $weight-400;
+        //     line-height: 1.5em;
+        //     color: $white-color;
+        //     letter-spacing: 0.03em;
+        //     text-align: center;
+
+        //     @include media (small){
+        //         line-height: 1.5em;
+        //         font-size: $font-size-20;
+        //     }
+        // }
+
+        p {
+          // @include media(small) {
+          //   text-align: justify;
+          // }
+        }
+
+        .learn-more {
+          text-align: center;
+          margin-top: 2.125em;
+
+          @include media(small) {
+            font-size: 1.25em;
+          }
+          a {
+            display: inline-block;
+            background-color: $nav-btn-bgcolor;
+            padding: 0.6375em 1.575em;
+            font-size: $font-size-13;
+            font-weight: $weight-bold;
+            color: $theme-color;
+            border: 0.075em solid $light-gray-color;
+            border-radius: 3.75em;
+
+            &:hover {
+              background-color: $theme-color;
+              color: $black-color;
+            }
+          }
+        }
+      }
+
+      .purpose-money-wallet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
+        margin: 6.25em 0 0 0;
+
+        // @include media (large){
+        //     font-size: 0.8em;
+        // }
+        @include media(medium) {
+          display: block;
+        }
+
+        .purpose-money-left {
+          position: relative;
+          z-index: 2;
+          max-width: 33em;
+
+          @include media(medium) {
+            display: block;
+            max-width: 100%;
+            text-align: center;
+          }
+          h2 {
+            text-align: left;
+            @include media(medium) {
+              text-align: center;
+            }
+          }
+          p {
+            text-align: left;
+            @include media(medium) {
+              text-align: center;
+            }
+          }
+
+          // h2{
+          //     font-size: $font-size-50;
+          //     font-weight: $weight-700;
+          //     line-height: 1em;
+          //     color: $theme-color;
+          //     // margin-bottom: 1.125em;
+          //     margin-bottom: 0.5em;
+          //     text-align: left;
+
+          //     @include media (small){
+          //         text-align: center;
+          //     }
+          // }
+
+          // p{
+          //     font-size: $font-size-16;
+          //     font-weight: $weight-400;
+          //     line-height: 1.5em;
+          //     color: $white-color;
+          //     letter-spacing: 0.03em;
+          //     @include media (small){
+          //         line-height: 1.5em;
+          //         font-size: $font-size-20;
+          //     }
+          // }
+
+          .money-wallet-download {
+            display: flex;
+            margin-top: 2.0625em;
+            align-items: center;
+
+            @include media(medium) {
+              justify-content: center;
+            }
+            @include media(small) {
+              display: block;
+            }
+
+            button {
+              padding: 0;
+
+              @include media(small) {
+                font-size: 1.25em;
+              }
+              a {
+                display: inline-block;
+                background-color: $nav-btn-bgcolor;
+                padding: 1.125em 4em 1.125em 1.6875em;
+                font-size: $font-size-13;
+                font-weight: $weight-bold;
+                color: $theme-color;
+                border: 0.075em solid $light-gray-color;
+                border-radius: 3.75em;
+
+                &:hover {
+                  background-color: $theme-color;
+                  color: $black-color;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  right: 1.8em;
+                  // top: 1.9em;
+                  top: 37%;
+                  background-image: url("../../images/path-yellow.png");
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  width: 1.5em;
+                  height: 1.5em;
+                }
+
+                &:hover {
+                  &::after {
+                    background-image: url("../../images/path.png");
+                  }
+                }
+              }
+            }
+
+            ul {
+              display: flex;
+              margin-left: 1.375em;
+
+              @include media(small) {
+                justify-content: center;
+                margin-top: 1.5em;
+              }
+              li {
+                margin: 0 1.25em 0 0;
+                cursor: default;
+
+                img {
+                  width: 3em;
+                  // @include media (medium){
+                  //     width: 3em;
+                  // }
+                }
+              }
+            }
+          }
+        }
+        .purpose-money-right {
+          z-index: 2;
+          position: relative;
+
+          @include media(medium) {
+            max-width: 80%;
+            margin: 0 auto;
+            margin-top: 5em;
+          }
+          // @include media (small){
+          //     max-width: 60%;
+          // }
+        }
+      }
+    }
+  }
+}
+
+.wd_purpose {
+  &.purpose-section {
+    &::after {
+      background-image: none !important;
+    }
+
+    .purpose-money-wallet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2em;
+      margin: 6.25em 0 0 0;
+
+      // @include media (large){
+      //     font-size: 0.8em;
+      // }
+      @include media(medium) {
+        display: block;
+      }
+
+      .purpose-money-left {
+        position: relative;
+        z-index: 2;
+        max-width: 33em;
+
+        @include media(medium) {
+          display: block;
+          max-width: 100%;
+          text-align: center;
+        }
+        h2 {
+          text-align: left;
+          @include media(medium) {
+            text-align: center;
+          }
+        }
+        p {
+          text-align: left;
+          @include media(medium) {
+            text-align: center;
+          }
+        }
+
+        // h2{
+        //     font-size: $font-size-50;
+        //     font-weight: $weight-700;
+        //     line-height: 1em;
+        //     color: $theme-color;
+        //     // margin-bottom: 1.125em;
+        //     margin-bottom: 0.5em;
+        //     text-align: left;
+
+        //     @include media (small){
+        //         text-align: center;
+        //     }
+        // }
+
+        // p{
+        //     font-size: $font-size-16;
+        //     font-weight: $weight-400;
+        //     line-height: 1.5em;
+        //     color: $white-color;
+        //     letter-spacing: 0.03em;
+        //     @include media (small){
+        //         line-height: 1.5em;
+        //         font-size: $font-size-20;
+        //     }
+        // }
+
+        .money-wallet-download {
+          display: flex;
+          margin-top: 2.0625em;
+          align-items: center;
+
+          @include media(medium) {
+            justify-content: center;
+          }
+          @include media(small) {
+            display: block;
+          }
+
+          button {
+            padding: 0;
+
+            @include media(small) {
+              font-size: 1.25em;
+            }
+            a {
+              display: inline-block;
+              background-color: $nav-btn-bgcolor;
+              padding: 1.125em 4em 1.125em 1.6875em;
+              font-size: $font-size-13;
+              font-weight: $weight-bold;
+              color: $theme-color;
+              border: 0.075em solid $light-gray-color;
+              border-radius: 3.75em;
+
+              &:hover {
+                background-color: $theme-color;
+                color: $black-color;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                right: 1.8em;
+                // top: 1.9em;
+                top: 40%;
+                background-image: url("../../images/path-yellow.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 1.5em;
+                height: 1.5em;
+              }
+
+              &:hover {
+                &::after {
+                  background-image: url("../../images/path.png");
+                }
+              }
+            }
+          }
+
+          ul {
+            display: flex;
+            margin-left: 1.375em;
+
+            @include media(small) {
+              justify-content: center;
+              margin-top: 1.5em;
+            }
+            li {
+              margin: 0 1.25em 0 0;
+              cursor: default;
+
+              img {
+                width: 3em;
+                // @include media (medium){
+                //     width: 3em;
+                // }
+              }
+            }
+          }
+        }
+      }
+      .purpose-money-right {
+        z-index: 2;
+        position: relative;
+
+        @include media(medium) {
+          max-width: 80%;
+          margin: 0 auto;
+          margin-top: 5em;
+        }
+        // @include media (small){
+        //     max-width: 60%;
+        // }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../styles/config";
+
+.blogTags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  &__item {
+    font-weight: 700;
+    font-size: 12px;
+    color: $theme-color;
+    background: $primary-black-background;
+    border: 2.62222px solid $secondary-black-background;
+    padding: 5px 15px;
+    border-radius: 2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: $theme-color;
+      color: $black-color;
+      border-color: $theme-color;
+    }
+  }
+}

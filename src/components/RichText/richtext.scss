@@ -1,0 +1,32 @@
+@import "../../styles/config";
+
+.richtext-content{
+    padding: 3em 0 5em 0;
+    .container{
+        opacity: 0.7;
+
+        h5{
+            color: #fff;
+            font-size: 0.875em;
+            margin-bottom: 1em;
+        }
+
+        p{
+            font-size: 0.875em;
+            line-height: 1.75em;
+            margin-bottom: 1em;
+        }
+        ul, ol{
+            margin: 1em 0;
+            padding-left: 1em;
+            li{
+                font-size: 0.875em;
+                margin-bottom: 1em;
+                line-height: 1.75em;
+            }
+        }
+        ul{
+            list-style-type: disc;
+        }
+    }
+}

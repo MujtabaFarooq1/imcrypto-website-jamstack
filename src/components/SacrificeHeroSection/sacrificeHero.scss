@@ -1,0 +1,90 @@
+@import "../../styles/globalstyle.scss";
+
+.scrifice_hero_section {
+  margin-top: 110px;
+  padding-top: 185px;
+  padding-bottom: 100px;
+  background-image: url("../../images/hero.png");
+  background-size: cover;
+  background-position: center;
+  text-transform: uppercase;
+  @media (max-width: 1098px) {
+    margin-top: 80px;
+  }
+  .sacrifice_hero_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -80px;
+
+    .hero_banner_two {
+      margin-right: 15px;
+    }
+    .hero_banner_one {
+      margin-left: 15px;
+    }
+
+    .hero_banner_head {
+      @media (max-width: 768px) {
+        width: 65%;
+      }
+    }
+
+    .banner_img {
+      height: 130px;
+      width: 130px;
+      @media (max-width: 1280px) {
+        height: auto;
+        width: 70px;
+        margin-bottom: 2em;
+      }
+      @media (max-width: 768px) {
+        height: auto;
+        width: 70px;
+      }
+    }
+  }
+  .sacrifice_hero_heading {
+    color: #fba81a;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    margin: 0px 20px 0px 20px;
+
+    @media (max-width: 786px) {
+      font-size: 32px;
+
+      line-height: 1em;
+    }
+  }
+  .scrifice_hero_bottom_text {
+    color: #fba81a;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    justify-content: center;
+    position: relative;
+    bottom: -70px;
+  }
+}
+
+.primary_btn {
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.primarybutton {
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+  margin-top: 25px !important;
+  font-weight: 700;
+  justify-content: flex-start !important;
+  display: flex;
+}

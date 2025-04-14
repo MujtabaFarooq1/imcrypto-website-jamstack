@@ -1,0 +1,147 @@
+// @import "../../styles/config";
+
+// .recentblogs-scetion{
+//     padding: 6.25em 0;
+
+//     .container{
+
+//         .recentblogs-inner-section{
+
+//             .recentblog-main-content{
+//                 display: grid;
+//                 grid-template-columns: 1fr 4fr;
+//                 grid-template-rows: 1fr;
+//                 grid-column-gap: 2em;
+
+//                 .recentblog-slider-info{
+
+//                     .section-header{
+//                         max-width:  24.1875em;
+        
+//                         @include media (large){
+//                             font-size: 0.8em;
+//                         }
+        
+//                         h6{
+//                             font-size: $font-size-20;
+//                             font-weight: $weight-700;
+//                             line-height: 1em;
+//                             color: $white-color;
+//                             text-transform: uppercase;
+//                             margin-bottom: 1em;
+//                             text-align: left;
+//                         }
+//                         h1{
+//                             font-size: $font-size-50;
+//                             font-weight: $weight-700;
+//                             line-height: 1em;
+//                             color: $theme-color;
+//                             margin-bottom:  0.5em;
+//                             text-align: left;
+//                         }
+//                         p{
+//                             font-size: $font-size-16;
+//                             font-weight: $weight-400;
+//                             line-height: 1.5em;
+//                             color: $white-color;
+//                             letter-spacing: 0.03em;
+//                             text-align: center;
+//                             text-align: left;
+        
+//                             @include media (small){
+//                                 line-height: 1.5em;
+//                                 font-size: $font-size-20;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .recentblog-main-slider{
+                    
+//                     .blog-slider-col{
+//                         background-color: $product-row-bgcolor;
+//                         border: 0.125em solid $product-row-bordercolor;
+//                         border-radius: 1.625em;
+//                         padding: 2.5em;
+//                         width: 100%;
+//                         min-width: 30em;
+
+//                         .blog-header{
+//                             display: flex;
+//                             align-items: center;
+//                             justify-content: space-between;
+//                             margin: 2.5em 0 0.9375em 0;
+                            
+//                             h6{
+//                                 font-size: $font-size-16;
+//                                 font-weight: $weight-700;
+//                                 line-height: 1.5em;
+//                                 color: $theme-color;
+//                                 text-transform: capitalize;
+//                             }
+//                             p{
+//                                 font-size: $font-size-16;
+//                                 font-weight: $weight-400;
+//                                 line-height: 1.5em;
+//                                 color: $light-gray-color;
+//                                 text-transform: capitalize;
+//                             }
+//                         }
+
+//                         .blog-info{
+//                             h5{
+//                                 font-size: $font-size-24;
+//                                 line-height: 1.5em;
+//                                 font-weight: $weight-700;
+//                                 color: $white-color;
+//                                 text-align: left;
+//                                 margin-bottom: 0.625em;
+//                             }
+//                             p{
+//                                 font-size: $font-size-16;
+//                                 line-height: 1.5em;
+//                                 font-weight: $weight-400;
+//                                 color: $white-color;
+//                                 text-align: left;
+//                                 opacity: 0.6;
+//                             }
+
+//                             .blogs-learn-more{
+//                                 margin-top: 2.125em;
+            
+//                                 @include media (small){
+//                                     font-size: 1.25em;
+//                                 }
+
+//                                 button{
+//                                     padding: 0;
+//                                     a{
+//                                         display: inline-block;
+//                                         background-color: $nav-btn-bgcolor;
+//                                         padding:  0.6375em 1.575em;
+//                                         font-size: $font-size-13;
+//                                         font-weight: $weight-bold;
+//                                         color: $theme-color;
+//                                         border: 0.075em solid $light-gray-color;
+//                                         border-radius: 3.75em;
+//                                         text-transform: uppercase;
+                
+//                                         &:hover{
+//                                             background-color: $theme-color;
+//                                             color: $black-color;
+//                                         }
+//                                     }
+
+//                                 }
+                                
+//                             }
+//                         }
+//                     }
+//                 }
+
+//             }
+
+            
+//         }
+//     }
+// }

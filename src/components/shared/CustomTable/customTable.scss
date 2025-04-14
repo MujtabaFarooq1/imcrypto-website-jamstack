@@ -1,0 +1,254 @@
+@import "./../../../styles/globalstyle.scss";
+
+// $breakpoint-small
+
+.customTable {
+  margin: 30px auto;
+
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    min-width: max-content;
+  }
+
+  th,
+  td {
+    // text-align: center;
+    border: none;
+  }
+
+  th {
+    color: $theme-color;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    padding-right: 15px;
+  }
+  .t-heading {
+    text-align: center;
+    cursor: pointer;
+
+    &__sortArrow {
+      display: inline-block;
+      transform: rotate(90deg);
+      margin-right: 5px;
+
+      transition: all 0.5s linear;
+    }
+  }
+
+  td {
+    color: white;
+    padding-left: 0px !important;
+    padding-right: 15px !important;
+
+    // max-width: 100px;
+
+    div {
+      // max-width: 100%;
+
+      white-space: nowrap;
+      // overflow: hidden !important;
+      // text-overflow: ellipsis;
+    }
+    .tableData {
+      background: #000000;
+      border: 1.41266px solid #303030;
+      border-radius: 15px;
+      padding: 10px;
+      white-space: nowrap;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    // .firstDt {
+    //   text-align: left;
+    // }
+
+    .tableLink {
+      display: block;
+      padding: 10px;
+      color: black;
+      background: $theme-color;
+      border: 0.0625em solid $light-gray-color;
+      border-radius: 37rem;
+      // width: 90%;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      margin-right: 0;
+      margin-left: auto;
+      margin-bottom: 1rem;
+      &:hover {
+        border: 0.0625em solid $light-gray-color;
+        background-color: transparent;
+        color: $theme-color;
+        cursor: pointer;
+      }
+
+      @include media(small) {
+        font-size: 13px;
+        width: 100%;
+      }
+    }
+
+    .tableLink--two {
+      background: #1d1d1d;
+      border: 2px solid #434343;
+      border-radius: 61px;
+      color: $theme-color;
+      &:hover {
+        background-color: #fba81ad0;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // tr {
+  //   cursor: pointer;
+  // }
+}
+
+.containerBox {
+  padding: 30px;
+  border: 2px solid #282828;
+  background: #181818;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+  @include media(small) {
+    padding: 2px;
+    margin-top: 1rem;
+    height: auto;
+  }
+
+  .inputWithButton {
+    &__container {
+      input {
+        background-color: transparent;
+        width: 100%;
+        padding: 0px 10px;
+      }
+      button {
+        padding: 13px 25px;
+        a {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .tablePaginationBtn__pageContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tablePaginationBtn {
+    padding: 10.2px 25.2px;
+    background: #1d1d1d;
+    white-space: nowrap;
+
+    border-radius: 60px;
+
+    color: #555555;
+    font-weight: 700;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 1024) {
+      font-size: 10px;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    // medium-large
+    @include media(medium-large) {
+      padding: 5px 10px;
+      min-width: 50px;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include media(small) {
+      min-width: 50px;
+    }
+
+    @include media(medium-small) {
+      min-width: 40px;
+      padding: 4px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      font-size: 7px;
+    }
+
+    &--outlined {
+      border: 1.2px solid #434343;
+
+      svg {
+        path {
+          fill: #434343;
+        }
+
+        @include media(small) {
+          width: 28px;
+        }
+      }
+
+      &--active {
+        color: $theme-color;
+
+        svg {
+          path {
+            fill: $theme-color;
+          }
+        }
+      }
+    }
+
+    &--pageItem {
+      &--active {
+        color: $theme-color;
+        border: 1.2px solid #434343;
+      }
+    }
+
+    &--filled {
+      background-color: $theme-color;
+      color: black;
+      font-weight: 900;
+      &:hover {
+        background-color: #fba81aa9;
+      }
+    }
+  }
+}
+
+.tablePaginationBtn__pageContainer {
+  display: flex;
+  overflow-x: auto;
+  margin-right: 10px;
+
+  &--scroller {
+    display: flex;
+    margin-right: 10px;
+  }
+}
+
+.tablePagination__loading {
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.d-block {
+  display: block !important;
+}

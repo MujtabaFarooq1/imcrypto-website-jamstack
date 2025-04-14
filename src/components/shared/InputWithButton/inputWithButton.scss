@@ -1,0 +1,40 @@
+@import "./../../../styles/globalstyle.scss";
+
+.inputWithButton {
+  &__container {
+    background: $primary-black-background;
+    border: 3.15508px solid $secondary-black-background;
+    border-radius: 41.016px;
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+
+    & img {
+      width: 15px;
+      margin-left: 15px;
+    }
+
+    & input {
+      color: white !important;
+      border: none;
+      outline: none;
+    }
+
+    & button {
+      background-color: $theme-color;
+      border-radius: 5rem;
+      padding: 0px 30px;
+      &:hover{
+        background-color: #fba81ad0;
+      }
+      a {
+        color: black;
+        font-weight: 600;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

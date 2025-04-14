@@ -1,0 +1,78 @@
+@import "../../../styles/config";
+
+.blogcard {
+  background: $product-row-bgcolor;
+  border: 1.58px solid $product-row-bordercolor;
+  border-radius: 20.54px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+   .blog_card_meta_column{
+    padding: 0px;
+   }
+
+  &__title {
+    font-weight: 700;
+    font-size: 27px;
+    color: $white-color;
+    text-align: left;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: $white-color;
+  }
+
+  &__btn {
+    background: $nav-btn-bgcolor;
+    border: 1.2px solid $light-gray-color;
+    border-radius: 60px;
+    color: $theme-color;
+    padding: 10px 18px;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover {
+      color: $black-color;
+      background-color: $theme-color;
+      border-color: $theme-color;
+    }
+  }
+
+  &__meta {
+    margin: 1rem 0px;
+    &__date {
+      color: $theme-color;
+      font-size: 12.64px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    &__categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+
+      &__item {
+        font-weight: 400;
+        font-size: 12.64px;
+        color: $light-gray-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+
+        svg {
+          margin-right: 5px;
+          * {
+            fill: $light-gray-color;
+          }
+        }
+      }
+    }
+  }
+}

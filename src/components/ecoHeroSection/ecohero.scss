@@ -1,0 +1,162 @@
+@import "../../styles/config"; 
+
+.what-imwallet-section{
+    padding: 6.875em 0 7.5em 0;
+    position: relative;
+    @include media(small){
+        padding: 5em 0;
+    }
+    @include media(medium-small){
+        padding: 3em 0;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2em;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../../images/divider-line.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../../images/divider-line.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    .container{
+        .what-imwallet-inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include media (medium){
+                display: block;
+            }
+            .what-imwallet-left{
+                width: 50%;
+                padding: 1.5em;
+                @include media (medium){
+                    width: 100%;
+                    text-align: center;
+                }
+                @include media (small){
+                    font-size: 0.875em;
+                }
+                button {
+                    padding: 0;
+                    font-size: inherit;
+                    margin: 1.5em 0 0;
+                    a {
+                        display: inline-block;
+                        background-color: #fba81a;
+                        padding: 1em 2.625em;
+                        font-size: 0.813em;
+                        font-weight: bold;
+                        color: #1d1d1d;
+                        border: 0.075em solid #737373;
+                        border-radius: 3.75em;
+                        text-transform: uppercase;
+                        &:hover {
+                            background-color: #1d1d1d;
+                            color: #fba81a;
+                        }
+                    }
+                }
+                h6{
+                    font-size: $font-size-20;
+                    color: $white-color;
+                    line-height: 1em;
+                    font-weight: 600;
+                    text-align: left;
+                    margin-bottom: 1em;
+                    @include media (medium){
+                        text-align: center;
+                    }
+                }
+                h2{
+                    font-size: $font-size-50;
+                    line-height: 1.25em;
+                    font-weight: 600;
+                    color: $theme-color;
+                    text-align: left;
+                    margin-bottom: 0.5em;
+                    @include media (medium){
+                        text-align: center;
+                    }
+                    @include media (small){
+                        text-align: center;
+                        font-size: $font-size-40;
+                    }
+                }
+                p{
+                    font-size: $font-size-16;
+                    font-weight: $weight-400;
+                    line-height: 1.5em;
+                    color: $white-color;
+                    letter-spacing: 0.03em;
+                    opacity: 0.8;
+                    @include media (small){
+                        line-height: 1.5em;
+                        font-size: $font-size-20;
+                    }
+                }
+                span{
+                    display: block;
+                    margin-top: 1em;
+                    font-size: $font-size-20;
+                    font-weight: 700;
+                    line-height: 1.875em;
+                }
+            }
+            .what-imwallet-right{
+                width: 65%;
+                max-width: 36.375em;
+                // padding: 1.5em;
+                background: #181818;
+                border: 1.92397px solid #282828;
+                border-radius: 25.0116px;
+                // height: 583px;
+                object-fit: cover;
+                border-radius: 25px;
+
+                @include media (medium){
+                    width: 100%;
+                    max-width: 50%;
+                    margin: 0 auto;
+                    margin-top: 5em;
+                }
+                @include media (small){
+                    max-width: 80%;
+                }
+
+                > div{
+                    width: 100%;
+                    display: block;
+                    img{
+                        width: 100%;
+                        display: block;
+                        border-radius: 30px;
+                        object-fit: cover;
+                    }
+                }
+               
+            }
+        }
+    }
+}

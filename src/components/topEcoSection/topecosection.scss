@@ -1,0 +1,100 @@
+@import "../../styles/config"; 
+
+.imwalletmoney-section-header{
+    margin-top: 7em;
+    padding: 5.625em 0 7em 0;
+    @include media (medium){
+        margin-top: 4.5em;
+    }
+    @include media (small){
+        padding-bottom: 0;
+    }
+    >div{
+        &::before{
+            background-image: none !important;
+        }
+        &::after{
+            background-image: none !important;
+        }
+    }
+    .container{
+        .section-header{
+            max-width:  52.4375em;
+            margin: 0 auto;
+    
+            // @include media (large){
+            //     font-size: 0.8em;
+            // }
+    
+            .subTitle{
+                font-size: $font-size-20;
+                font-weight: $weight-700;
+                line-height: 1em;
+                color: $white-color;
+                text-transform: uppercase;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            .bannerTitle{
+                font-size: $font-size-50;
+                font-weight: $weight-700;
+                line-height:1.5;
+                color: $theme-color;
+                margin-bottom:  0.5em;
+                text-align: center;
+                @include media (medium-small){
+                    font-size: $font-size-32;
+                }
+            }
+            p{
+                font-size: $font-size-16;
+                font-weight: $weight-400;
+                line-height: 1.5em;
+                color: $white-color;
+                letter-spacing: 0.03em;
+                text-align: center;
+                opacity: 0.8;
+    
+                @include media (small){
+                    line-height: 1.5em;
+                    // font-size: $font-size-20;
+                }
+            }
+    
+            .learn-more{
+                text-align: center;
+                margin-top: 2.125em;
+    
+                @include media (small){
+                    font-size: 1.25em;
+                }
+                a{
+                    display: inline-block;
+                    background-color: $nav-btn-bgcolor;
+                    padding:  0.6375em 1.575em;
+                    font-size: $font-size-13;
+                    font-weight: $weight-bold;
+                    color: $theme-color;
+                    border: 0.075em solid $light-gray-color;
+                    border-radius: 3.75em;
+    
+                    &:hover{
+                        background-color: $theme-color;
+                        color: $black-color;
+                    }
+    
+                }
+            }
+
+            .mainButton__container{
+                button{
+                    &.mainButton{
+                        @include media(medium-small){
+                            margin: 2em 0;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}

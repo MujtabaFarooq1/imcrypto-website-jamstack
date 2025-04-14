@@ -1,0 +1,147 @@
+.scrifice_multiChain_section {
+  .multiChain_calculation {
+    .multiChain_time {
+      justify-content: center;
+      color: #fba81a;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+    }
+    .multiChain_text {
+      text-align: center;
+      color: #ffff;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .multiChain_address {
+      text-align: center;
+      background: #303030;
+      border-radius: 15px;
+      padding: 18px 10px 18px 10px;
+      margin: 0 auto;
+      width: 45%;
+      color: #696868;
+      font-weight: 500;
+      font-size: 17px;
+      margin-top: 35px;
+      text-transform: normal;
+      word-break: break-all;
+
+      @media (max-width: 425px) {
+        width: 70%;
+        font-size: 14px;
+      }
+    }
+    .multiChain_amount {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 50px;
+      width: 45%;
+      border: 1px solid #322e2e;
+      border-radius: 1rem;
+      padding: 0px;
+      overflow: hidden;
+
+      @media (max-width: 700px) {
+        width: 70%;
+      }
+      .amount_one {
+        padding: 20px;
+
+        border-right: 1px solid #322e2e;
+
+        @media (max-width: 1000px) {
+          border-right: 0px;
+          border-bottom: 1px solid #322e2e;
+        }
+
+        text-align: center;
+        background-color: #1e1e1e;
+
+        .amount_one_text {
+          color: #fff;
+          font-weight: 600;
+          font-size: 17px;
+          @media (max-width: 550px) {
+            font-size: 13px;
+          }
+        }
+        .amount_one_value {
+          color: #fba81a !important;
+          font-weight: 700;
+          font-size: 25px;
+          @media (max-width: 550px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .amount_two {
+        padding: 20px;
+
+        text-align: center;
+        color: #fff;
+        background-color: #1e1e1e;
+
+        .amount_two_text {
+          color: #fff;
+          font-weight: 600;
+          font-size: 17px;
+          @media (max-width: 550px) {
+            font-size: 13px;
+          }
+        }
+        .amount_two_value {
+          color: #fba81a !important;
+          font-weight: 700;
+          font-size: 25px;
+          word-break: break-all;
+          @media (max-width: 550px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .multiChain_result {
+      background-color: #1e1e1e;
+      margin: 0 auto;
+      border-radius: 15px;
+      width: 20%;
+      margin-top: 40px;
+      padding: 20px 10px 20px 10px;
+      border: 1px solid #322e2e;
+      @media (max-width: 992px) {
+        width: 50%;
+      }
+      @media (max-width: 450px) {
+        width: 70%;
+      }
+      .text {
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        @media (max-width: 450px) {
+          font-size: 15px;
+        }
+      }
+      .value {
+        font-weight: 700;
+        font-size: 25px;
+        text-align: center;
+        color: #fba81a !important;
+        margin-top: 20px;
+        @media (max-width: 450px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.pd-0 {
+  padding: 0px !important;
+}

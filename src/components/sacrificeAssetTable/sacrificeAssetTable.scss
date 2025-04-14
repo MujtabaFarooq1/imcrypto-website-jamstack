@@ -1,0 +1,195 @@
+.Scrifice_Asset_Table_Section {
+  &.table_center {
+    td {
+      text-align: center !important;
+    }
+  }
+
+  &__table {
+    table-layout: auto !important;
+    overflow: hidden;
+  }
+
+  .table_heading {
+    margin: 50px 0px 20px 0px;
+    .table_heading_text {
+      color: #fba81a;
+      font-weight: 700;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+
+  .table_container {
+    // width: max-content;
+    // border: 1px solid #282828;
+    // border-radius: 17px;
+    // margin: 0 auto;
+
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #322e2e;
+    border-radius: 15px;
+    background: #1e1e1e;
+  }
+
+  .table_wrapper {
+    width: 45%;
+    overflow: auto;
+    margin: 0 auto;
+    padding-bottom: 5px;
+
+    // &::-webkit-scrollbar {
+    //   -webkit-appearance: none;
+    // }
+
+    &::-webkit-scrollbar:vertical {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #1e1e1e;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background-color: #322e2e;
+    }
+
+    @media (max-width: 992px) {
+      width: 80%;
+    }
+
+    table {
+      margin: 0 auto;
+
+      margin: 0 auto;
+      /* background-color: #1e1e1e; */
+      width: 100%;
+      table-layout: fixed;
+      border-radius: 15px;
+      border-collapse: collapse;
+      background: transparent;
+
+      @media (max-width: 530px) {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      background-color: #1e1e1e;
+      // width: 665px;
+      width: 100%;
+      table-layout: fixed;
+      border-radius: 15px;
+      border-collapse: collapse;
+      thead th {
+        // color: #fba81a;
+        // text-align: center;
+        // border: 1px solid #322e2e;
+        // padding: 10px;
+        // text-transform: uppercase;
+        // font-size: 14px;
+        color: #fba81a;
+        text-align: center;
+        border: 0 solid #322e2e;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        /* border-top: 0; */
+        background: transparent;
+        border-radius: 0;
+        border: 1px solid #322e2e;
+        border-bottom: 1px solid #322e2e;
+        border-right: 0;
+        border-top: 0;
+
+        &:first-child {
+          border-left: 0;
+        }
+      }
+      tr td {
+        // border: 1px solid #322e2e;
+        // text-align: left;
+        // padding: 10px;
+        // font-size: 13px;
+        // border-radius: 15px;
+        min-width: 120px;
+        border-left: 1px solid #322e2e;
+        text-align: left;
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 0;
+        background: transparent;
+        border-bottom: 1px solid #322e2e;
+
+        .table_data_container {
+          display: flex;
+          flex-direction: row;
+          min-width: 125px;
+          justify-content: flex-start;
+        }
+
+        &:first-child {
+          border-left: 0;
+        }
+
+        .table_img {
+          height: 25px;
+        }
+        .table_field_data {
+          vertical-align: sub;
+          margin-left: 7px;
+          white-space: nowrap;
+          line-height: 25px;
+        }
+      }
+
+      tr {
+        &:last-child {
+          td {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.custom-width {
+    .table_wrapper {
+      width: 50%;
+      max-width: 50%;
+      @media (max-width: 1100px) {
+        width: 60%;
+        max-width: 60%;
+      }
+      @media (max-width: 992px) {
+        width: 80%;
+        max-width: 80%;
+      }
+    }
+  }
+}
+
+// Asset table scroll sstyle ................... //
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #969696;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 5px;
+  background-color: #969696;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: black;
+}

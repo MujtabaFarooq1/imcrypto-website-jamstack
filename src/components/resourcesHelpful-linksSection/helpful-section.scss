@@ -1,0 +1,145 @@
+@import "../../styles/config";
+
+
+.helpful-section{
+    padding: 1.875em 0 2em 0;
+    ul{
+        &.helpfull-grid{
+            display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3.125em;
+        grid-row-gap: 3.125em;
+        @include media(large){
+            grid-column-gap: 1.5em;
+            grid-row-gap: 1.5em;
+        }
+        @include media(medium){
+            grid-template-columns: 1fr;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+        }
+        li{
+            .help-col{
+                display: flex;
+                justify-content: space-between;
+                background-color: $product-row-bgcolor;
+                border: 0.125em solid $product-row-bordercolor;
+                border-radius: 1.625em;
+                padding: 1.25em;
+                height: 100%;
+                @include media(large){
+                   font-size: 0.8em;
+                   padding: 0.875em;
+                }
+                @include media(medium-small){
+                    flex-direction: column;
+                 }
+                
+
+                .help-col-left{
+                    max-width: 8.375em;
+                    width: 100%;
+                    @include media(medium){
+                        max-width: 15em;
+                    }
+                    @include media(small){
+                        max-width: 12em;
+                    }
+                    @include media(medium-small){
+                        max-width: 100%;
+                     }
+
+                    .gatsby-image-wrapper{
+                        height: 100%;
+                            img{
+                                width: 100%;
+                                min-height: 6em;
+                                border-radius: 1.25em;
+                                height: 100% !important;
+                                object-fit: cover !important;
+                                @include media(medium){
+                                    min-height: 10em;
+                                }
+                            }
+                    }
+                    
+                }
+                .help-col-right{
+                    width: 70%;
+                    padding-left: 1.25em;
+                    @include media(medium-small){
+                        margin: 1.5em 0 1em 0;
+                        max-width: 100%;
+                        width: 100%;
+                        padding: 0;
+                     }
+                    .help-col-title{
+                        text-align: left;
+                        a{
+                            font-size: $font-size-16;
+                            font-weight: 700;
+                            line-height: 1.25em;
+                            color: $white-color;
+                            text-align: left;
+                            cursor: pointer;
+                            text-decoration: underline !important;
+
+                            &:hover{
+                                color: $theme-color;
+                            }
+                        }
+                    }
+
+                    .helpful-col-tags{
+                        display: flex;
+                        justify-content: flex-start;
+                        ul{
+                            display: inline-flex;
+                            justify-content: flex-start;
+                            margin-top: 1em;
+                            grid-column-gap: 0;
+                            grid-row-gap: 0;
+    
+                            li{
+                                a {
+                                    font-size: $font-size-10;
+                                    font-weight: 700;
+                                    line-height: 1em;
+                                    text-transform: uppercase;
+                                    padding: 0.25em 0.8em;
+                                    border: 0.2em solid $product-row-bordercolor;
+                                    background-color: $gray-151515;
+                                    border-radius: 5em;
+                                    margin: 0 1em 0 0;
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    
+                        
+                                    &:hover {
+                                      background-color: $theme-color;
+                                      color: $black-color;
+                                      border-color: transparent;
+                                    }
+                                  }
+                            }
+                        }
+                    }   
+                   
+                }   
+            }
+        }
+        }
+        h4{
+            font-size: $font-size-16;
+            text-align: center;
+            color: $white-color;
+        }
+    }
+    
+    button{
+        margin: 2em auto !important;
+        a{  
+            font-size: $font-size-12 !important;
+        }
+    }
+}

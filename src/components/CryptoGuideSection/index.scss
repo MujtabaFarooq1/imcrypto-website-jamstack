@@ -1,0 +1,90 @@
+@import "../../styles/globalstyle.scss";
+.beginners_and_team {
+  margin: 50px auto 0px;
+  padding: 20px 0px 0px;
+
+  .wraper {
+    width: 80%;
+    margin: 0px auto;
+    .video-box {
+      text-align: center;
+      position: relative;
+
+      //media qeury here margin top 2rem
+
+      @include media(small) {
+        margin-top: 2rem;
+      }
+
+      .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0px;
+        outline: 0px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 55%;
+          transform: translate(-50%, -50%);
+          width: 18px;
+          height: 25px;
+          background-color: #fff;
+          clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        }
+      }
+    }
+  }
+  .user-row {
+    margin-top: 25px;
+    .user-title {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .user-desc {
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.btn-main {
+  display: inline-block;
+  background: #fba81a;
+  border: 2px solid #fba81a;
+  border-radius: 61px;
+
+  margin: 2rem 0px;
+
+  &--center {
+    margin: 2rem auto;
+  }
+}
+.op-8 {
+  opacity: 0.8;
+}
+.video_nail{
+  @media (max-width: 2560px) {
+  width: 95% !important;
+  }
+
+
+}
+.my-5{
+  @media (max-width: 2560px) {
+    width: 100% !important;
+    }
+}
+
